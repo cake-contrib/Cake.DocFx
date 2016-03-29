@@ -1,3 +1,3 @@
-### New in 0.1.0
+### New in 0.1.1
 - Initial release
 - Generate your documentation with DocFxBuild
