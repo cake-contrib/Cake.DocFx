@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{4FD3E6A1-DA73-4F3D-B99E-0D0BB74D7150}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cake.DocFx", "src\Cake.DocFx\Cake.DocFx.csproj", "{6EF132F8-9A11-438F-AAD4-4AFDCF752920}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9F0AB666-00EC-4EE3-9001-3AA64470E8E0}"
+	ProjectSection(SolutionItems) = preProject
+		build.cake = build.cake
+		README.md = README.md
+		ReleaseNotes.md = ReleaseNotes.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{5556EC27-52FB-49FA-86D6-FA41CD8870E9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cake.DocFx.Tests", "tests\Cake.DocFx.Tests\Cake.DocFx.Tests.csproj", "{66E919D6-749E-49B0-93B9-5AC123256346}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6EF132F8-9A11-438F-AAD4-4AFDCF752920}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6EF132F8-9A11-438F-AAD4-4AFDCF752920}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6EF132F8-9A11-438F-AAD4-4AFDCF752920}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6EF132F8-9A11-438F-AAD4-4AFDCF752920}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66E919D6-749E-49B0-93B9-5AC123256346}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66E919D6-749E-49B0-93B9-5AC123256346}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66E919D6-749E-49B0-93B9-5AC123256346}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66E919D6-749E-49B0-93B9-5AC123256346}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6EF132F8-9A11-438F-AAD4-4AFDCF752920} = {4FD3E6A1-DA73-4F3D-B99E-0D0BB74D7150}
+		{66E919D6-749E-49B0-93B9-5AC123256346} = {5556EC27-52FB-49FA-86D6-FA41CD8870E9}
+	EndGlobalSection
+EndGlobal
