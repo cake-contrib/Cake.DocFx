@@ -4,6 +4,9 @@ using Cake.Core.IO;
 
 namespace Cake.DocFx.Metadata
 {
+    /// <summary>
+    /// Commandline runner for docfx metadata
+    /// </summary>
     public sealed class DocFxMetadataRunner : DocFxTool<DocFxMetadataSettings>
     {
         public DocFxMetadataRunner(IFileSystem fileSystem, ICakeEnvironment environment, IProcessRunner processRunner, IGlobber globber) 

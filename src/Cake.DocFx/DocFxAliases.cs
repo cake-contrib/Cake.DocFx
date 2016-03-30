@@ -14,6 +14,40 @@ namespace Cake.DocFx
     [CakeAliasCategory("DocFx")]
     public static class DocFxAliases
     {
+        #region DocFx
+
+        [CakeAliasCategory("Documentation")]
+        [CakeMethodAlias]
+        public static void DocFx(this ICakeContext context)
+            => context.DocFx(null, null);
+
+        [CakeAliasCategory("Documentation")]
+        [CakeMethodAlias]
+        public static void DocFx(this ICakeContext context, FilePath configFile)
+            => context.DocFx(configFile, null);
+
+        [CakeAliasCategory("Documentation")]
+        [CakeMethodAlias]
+        public static void DocFx(this ICakeContext context, DocFxSettings settings)
+            => context.DocFx(null, settings);
+
+        [CakeAliasCategory("Documentation")]
+        [CakeMethodAlias]
+        public static void DocFx(this ICakeContext context, FilePath configFile, DocFxSettings settings)
+        {
+            Contract.NotNull(context, nameof(context));
+
+            settings = settings ?? new DocFxSettings();
+
+            var runner = new DocFxRunner(context.FileSystem, context.Environment, context.ProcessRunner,
+                context.Globber);
+            runner.Run(configFile, settings);
+        }
+
+        #endregion
+
+        #region DocFxBuild
+
         [CakeAliasCategory("Documentation")]
         [CakeMethodAlias]
         public static void DocFxBuild(this ICakeContext context) => context.DocFxBuild(null, null);
@@ -40,6 +74,10 @@ namespace Cake.DocFx
                 context.Globber);
             runner.Run(configFile, settings);
         }
+
+        #endregion
+
+        #region DocFxMetadata
 
         [CakeAliasCategory("Documentation")]
         [CakeMethodAlias]
@@ -78,5 +116,7 @@ namespace Cake.DocFx
                 context.Globber);
             runner.Run(settings);
         }
+
+        #endregion
     }
 }

@@ -49,6 +49,8 @@
     <Compile Include="Build\DocFxBuildRunner.cs" />
     <Compile Include="Build\DocFxBuildSettings.cs" />
     <Compile Include="DocFxAliases.cs" />
+    <Compile Include="DocFxRunner.cs" />
+    <Compile Include="DocFxSettings.cs" />
     <Compile Include="DocFxTool.cs" />
     <Compile Include="Helper\Contract.cs" />
     <Compile Include="Metadata\DocFxMetadataRunner.cs" />
