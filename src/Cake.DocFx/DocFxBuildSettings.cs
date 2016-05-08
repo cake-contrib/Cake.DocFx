@@ -1,7 +1,7 @@
 ﻿using Cake.Core.IO;
 using Cake.Core.Tooling;
 
-namespace Cake.DocFx.Build
+namespace Cake.DocFx
 {
     /// <summary>
     /// Settings used for docfx build calls.

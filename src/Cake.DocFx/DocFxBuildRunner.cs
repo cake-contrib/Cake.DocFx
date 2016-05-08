@@ -2,7 +2,7 @@
 using Cake.Core.IO;
 using Cake.DocFx.Helper;
 
-namespace Cake.DocFx.Build
+namespace Cake.DocFx
 {
     /// <summary>
     /// Commandline Runner for docfx build
