@@ -2,9 +2,7 @@
 using Cake.Core;
 using Cake.Core.Annotations;
 using Cake.Core.IO;
-using Cake.DocFx.Build;
 using Cake.DocFx.Helper;
-using Cake.DocFx.Metadata;
 
 namespace Cake.DocFx
 {

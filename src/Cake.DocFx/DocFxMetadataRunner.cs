@@ -2,7 +2,7 @@
 using Cake.Core;
 using Cake.Core.IO;
 
-namespace Cake.DocFx.Metadata
+namespace Cake.DocFx
 {
     /// <summary>
     /// Commandline runner for docfx metadata

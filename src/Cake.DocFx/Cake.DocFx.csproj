@@ -46,15 +46,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Build\DocFxBuildRunner.cs" />
-    <Compile Include="Build\DocFxBuildSettings.cs" />
+    <Compile Include="DocFxBuildRunner.cs" />
+    <Compile Include="DocFxBuildSettings.cs" />
     <Compile Include="DocFxAliases.cs" />
     <Compile Include="DocFxRunner.cs" />
     <Compile Include="DocFxSettings.cs" />
     <Compile Include="DocFxTool.cs" />
     <Compile Include="Helper\Contract.cs" />
-    <Compile Include="Metadata\DocFxMetadataRunner.cs" />
-    <Compile Include="Metadata\DocFxMetadataSettings.cs" />
+    <Compile Include="DocFxMetadataRunner.cs" />
+    <Compile Include="DocFxMetadataSettings.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.Static.cs" />
   </ItemGroup>
