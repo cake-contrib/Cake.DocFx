@@ -1,3 +1,6 @@
+### New in 0.1.5
+- Normalized namespaces
+
 ### New in 0.1.4
 - Added DocFxMetadata and DocFx alias
 
