@@ -5,20 +5,27 @@ using Cake.DocFx.Helper;
 namespace Cake.DocFx
 {
     /// <summary>
-    /// Commandline Runner for docfx build
+    /// Command line runner for the 'docfx build' command.
     /// </summary>
     public sealed class DocFxBuildRunner : DocFxTool<DocFxBuildSettings>
     {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="DocFxBuildRunner"/> class.
+        /// </summary>
+        /// <param name="fileSystem">The file system.</param>
+        /// <param name="environment">The environment.</param>
+        /// <param name="processRunner">The process runner.</param>
+        /// <param name="globber">The globber.</param>
         public DocFxBuildRunner(IFileSystem fileSystem, ICakeEnvironment environment, IProcessRunner processRunner, IGlobber globber) 
             : base(fileSystem, environment, processRunner, globber)
         {
         }
 
         /// <summary>
-        /// Runs docfx for current folder with the given configuration.
+        /// Runs DocFx for the current folder with the given configuration.
         /// </summary>
-        /// <param name="path">Optional path to config</param>
-        /// <param name="settings"></param>
+        /// <param name="path">The optional path to the docfx.json config file.</param>
+        /// <param name="settings">The settings.</param>
         public void Run(FilePath path, DocFxBuildSettings settings)
         {
             Contract.NotNull(settings, nameof(settings));

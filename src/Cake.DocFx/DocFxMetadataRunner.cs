@@ -5,19 +5,26 @@ using Cake.Core.IO;
 namespace Cake.DocFx
 {
     /// <summary>
-    /// Commandline runner for docfx metadata
+    /// Command line runner for the 'docfx metadata' command.
     /// </summary>
     public sealed class DocFxMetadataRunner : DocFxTool<DocFxMetadataSettings>
     {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="DocFxMetadataRunner"/> class.
+        /// </summary>
+        /// <param name="fileSystem">The file system.</param>
+        /// <param name="environment">The environment.</param>
+        /// <param name="processRunner">The process runner.</param>
+        /// <param name="globber">The globber.</param>
         public DocFxMetadataRunner(IFileSystem fileSystem, ICakeEnvironment environment, IProcessRunner processRunner, IGlobber globber) 
             : base(fileSystem, environment, processRunner, globber)
         {
         }
 
         /// <summary>
-        /// Runs docfx for current folder with the given configuration.
+        /// Runs DocFx for the current folder with the given configuration.
         /// </summary>
-        /// <param name="settings"></param>
+        /// <param name="settings">The settings.</param>
         public void Run(DocFxMetadataSettings settings)
         {
             Run(settings, GetArguments(settings));
