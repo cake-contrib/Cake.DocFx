@@ -1,3 +1,6 @@
+### New in 0.1.6
+- Added some documentation and examples. (Thanks to robertcoltheart)
+
 ### New in 0.1.5
 - Normalized namespaces
 
