@@ -5,7 +5,7 @@ using Cake.Core.Tooling;
 namespace Cake.DocFx
 {
     /// <summary>
-    ///     Settings used for docfx metadata
+    /// Contains settings used by <see cref="DocFxMetadataRunner"/>.
     /// </summary>
     public class DocFxMetadataSettings : ToolSettings
     {
@@ -22,8 +22,7 @@ namespace Cake.DocFx
         public IEnumerable<FilePath> Projects { get; set; }
 
         /// <summary>
-        ///     Optional argument.
-        ///     The default output folder is _site/ folder
+        /// Gets or sets the output folder. The default is api, and is configured in the 'metadata' section of docfx.json.
         /// </summary>
         public DirectoryPath OutputPath { get; set; }
     }

@@ -6,11 +6,19 @@ using Cake.Core.Tooling;
 namespace Cake.DocFx
 {
     /// <summary>
-    /// Base class for docfx tools
+    /// Base class for the DocFx runners.
     /// </summary>
-    /// <typeparam name="TSettings"></typeparam>
-    public abstract class DocFxTool<TSettings> : Tool<TSettings> where TSettings : ToolSettings
+    /// <typeparam name="TSettings">The type of tool settings to use.</typeparam>
+    public abstract class DocFxTool<TSettings> : Tool<TSettings> 
+        where TSettings : ToolSettings
     {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="DocFxTool{TSettings}"/> class.
+        /// </summary>
+        /// <param name="fileSystem">The file system.</param>
+        /// <param name="environment">The environment.</param>
+        /// <param name="processRunner">The process runner.</param>
+        /// <param name="globber">The globber.</param>
         protected DocFxTool(IFileSystem fileSystem, ICakeEnvironment environment, IProcessRunner processRunner, IGlobber globber) 
             : base(fileSystem, environment, processRunner, globber)
         {
@@ -28,7 +36,7 @@ namespace Cake.DocFx
         /// Gets the possible names of the tool executable.
         /// </summary>
         /// <returns>
-        /// The tool executable name.
+        /// The tool executable names.
         /// </returns>
         protected override IEnumerable<string> GetToolExecutableNames() => new[] {"docfx", "docfx.exe"};
     }
