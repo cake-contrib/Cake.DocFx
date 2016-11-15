@@ -9,7 +9,7 @@ This Addin for the Cake Build Automation System allows you to generate a documen
 To use docfx in your cake file simply import it and the docfx tool. Then define a doc task.
 ```cake
 #addin "Cake.DocFx"
-#tool "docfx.msbuild"
+#tool "docfx.console"
 
 Task("doc").Does(() => DocFx());
 ```
@@ -21,14 +21,14 @@ If the `docfx.json` file is anywhere else then the root directory you can pass i
 
 ```cake
 #addin "Cake.DocFx"
-#tool "docfx.msbuild"
+#tool "docfx.console"
 
 Task("doc").Does(() => DocFx("./docs/docfx.json"));
 ```
 
 >   **INFO**
 >   
->   The `DocFx` command requires an existing `docfx.json` file. To bootstrap docfx use `docfx init` or `./tools/docfx.msbuild/tools/docfx.exe init`.
+>   The `DocFx` command requires an existing `docfx.json` file. To bootstrap docfx use `docfx init` or `./tools/docfx.console/tools/docfx.exe init`.
 
 ## Build
 
