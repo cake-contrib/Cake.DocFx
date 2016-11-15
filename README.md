@@ -13,7 +13,7 @@ To use docfx in your cake file simply import it and the docfx tool. Then define 
 
 Task("doc").Does(() => DocFx());
 ```
->   Do not forget to load '#tool "docfx.msbuild"' at top of your cake file. Otherwise, you can not run the `DocFx()` command. 
+>   Do not forget to load '#tool "docfx.console"' at top of your cake file. Otherwise, you can not run the `DocFx()` command. 
 
 
 
