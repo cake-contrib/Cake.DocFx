@@ -34,38 +34,14 @@ var searchModule = function() {
 
     a({
         id:0,
-        title:"DocFxAliases",
-        content:"DocFxAliases",
+        title:"DocFxSettings",
+        content:"DocFxSettings",
         description:'',
         tags:''
     });
 
     a({
         id:1,
-        title:"DocFxMetadataRunner",
-        content:"DocFxMetadataRunner",
-        description:'',
-        tags:''
-    });
-
-    a({
-        id:2,
-        title:"DocFxBuildRunner",
-        content:"DocFxBuildRunner",
-        description:'',
-        tags:''
-    });
-
-    a({
-        id:3,
-        title:"DocFxRunner",
-        content:"DocFxRunner",
-        description:'',
-        tags:''
-    });
-
-    a({
-        id:4,
         title:"DocFxBuildSettings",
         content:"DocFxBuildSettings",
         description:'',
@@ -73,15 +49,7 @@ var searchModule = function() {
     });
 
     a({
-        id:5,
-        title:"DocFxTool",
-        content:"DocFxTool",
-        description:'',
-        tags:''
-    });
-
-    a({
-        id:6,
+        id:2,
         title:"DocFxMetadataSettings",
         content:"DocFxMetadataSettings",
         description:'',
@@ -89,34 +57,48 @@ var searchModule = function() {
     });
 
     a({
+        id:3,
+        title:"DocFxMetadataRunner",
+        content:"DocFxMetadataRunner",
+        description:'',
+        tags:''
+    });
+
+    a({
+        id:4,
+        title:"DocFxRunner",
+        content:"DocFxRunner",
+        description:'',
+        tags:''
+    });
+
+    a({
+        id:5,
+        title:"DocFxBuildRunner",
+        content:"DocFxBuildRunner",
+        description:'',
+        tags:''
+    });
+
+    a({
+        id:6,
+        title:"DocFxAliases",
+        content:"DocFxAliases",
+        description:'',
+        tags:''
+    });
+
+    a({
         id:7,
-        title:"DocFxSettings",
-        content:"DocFxSettings",
+        title:"DocFxTool",
+        content:"DocFxTool",
         description:'',
         tags:''
     });
 
     y({
-        url:'/Cake.DocFx/Cake.DocFx/api/Cake.DocFx/DocFxAliases',
-        title:"DocFxAliases",
-        description:""
-    });
-
-    y({
-        url:'/Cake.DocFx/Cake.DocFx/api/Cake.DocFx/DocFxMetadataRunner',
-        title:"DocFxMetadataRunner",
-        description:""
-    });
-
-    y({
-        url:'/Cake.DocFx/Cake.DocFx/api/Cake.DocFx/DocFxBuildRunner',
-        title:"DocFxBuildRunner",
-        description:""
-    });
-
-    y({
-        url:'/Cake.DocFx/Cake.DocFx/api/Cake.DocFx/DocFxRunner',
-        title:"DocFxRunner",
+        url:'/Cake.DocFx/Cake.DocFx/api/Cake.DocFx/DocFxSettings',
+        title:"DocFxSettings",
         description:""
     });
 
@@ -127,20 +109,38 @@ var searchModule = function() {
     });
 
     y({
-        url:'/Cake.DocFx/Cake.DocFx/api/Cake.DocFx/DocFxTool_1',
-        title:"DocFxTool<TSettings>",
-        description:""
-    });
-
-    y({
         url:'/Cake.DocFx/Cake.DocFx/api/Cake.DocFx/DocFxMetadataSettings',
         title:"DocFxMetadataSettings",
         description:""
     });
 
     y({
-        url:'/Cake.DocFx/Cake.DocFx/api/Cake.DocFx/DocFxSettings',
-        title:"DocFxSettings",
+        url:'/Cake.DocFx/Cake.DocFx/api/Cake.DocFx/DocFxMetadataRunner',
+        title:"DocFxMetadataRunner",
+        description:""
+    });
+
+    y({
+        url:'/Cake.DocFx/Cake.DocFx/api/Cake.DocFx/DocFxRunner',
+        title:"DocFxRunner",
+        description:""
+    });
+
+    y({
+        url:'/Cake.DocFx/Cake.DocFx/api/Cake.DocFx/DocFxBuildRunner',
+        title:"DocFxBuildRunner",
+        description:""
+    });
+
+    y({
+        url:'/Cake.DocFx/Cake.DocFx/api/Cake.DocFx/DocFxAliases',
+        title:"DocFxAliases",
+        description:""
+    });
+
+    y({
+        url:'/Cake.DocFx/Cake.DocFx/api/Cake.DocFx/DocFxTool_1',
+        title:"DocFxTool<TSettings>",
         description:""
     });
 
