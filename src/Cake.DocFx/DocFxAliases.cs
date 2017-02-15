@@ -81,7 +81,7 @@ namespace Cake.DocFx
 
             settings = settings ?? new DocFxSettings();
 
-            var runner = new DocFxRunner(context.FileSystem, context.Environment, context.ProcessRunner, context.Globber);
+            var runner = new DocFxRunner(context.FileSystem, context.Environment, context.ProcessRunner, context.Tools);
             runner.Run(configFile, settings);
         }
 
@@ -155,7 +155,7 @@ namespace Cake.DocFx
 
             settings = settings ?? new DocFxBuildSettings();
 
-            var runner = new DocFxBuildRunner(context.FileSystem, context.Environment, context.ProcessRunner, context.Globber);
+            var runner = new DocFxBuildRunner(context.FileSystem, context.Environment, context.ProcessRunner, context.Tools);
             runner.Run(configFile, settings);
         }
 
@@ -244,7 +244,7 @@ namespace Cake.DocFx
 
             settings = settings ?? new DocFxMetadataSettings();
 
-            var runner = new DocFxMetadataRunner(context.FileSystem, context.Environment, context.ProcessRunner, context.Globber);
+            var runner = new DocFxMetadataRunner(context.FileSystem, context.Environment, context.ProcessRunner, context.Tools);
             runner.Run(settings);
         }
     }
