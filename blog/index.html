@@ -8,7 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/Cake.DocFx/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/Cake.DocFx/assets/img/favicon.ico" type="image/x-icon">
-        <title>Docs - Cake.DocFx</title>
+        <title>Docs - Blog</title>
         <link href="/Cake.DocFx/assets/css/mermaid.css" rel="stylesheet">
         <link href="/Cake.DocFx/assets/css/highlight.css" rel="stylesheet">
         <link href="/Cake.DocFx/assets/css/bootstrap/bootstrap.css" rel="stylesheet" />
@@ -31,7 +31,7 @@
 
         
     </head>
-    <body class="hold-transition wyam layout-boxed layout-top-nav no-gutter">    
+    <body class="hold-transition wyam layout-boxed  ">    
         <div class="top-banner"></div>
         <div class="wrapper with-container">
             <!-- Header -->
@@ -43,6 +43,10 @@
                          
                 <nav class="navbar navbar-static-top" role="navigation">
                     <!-- Sidebar toggle button-->
+                        <a href="#" class="sidebar-toggle visible-xs-block" data-toggle="offcanvas" role="button">
+                            <span class="sr-only">Toggle side menu</span>
+                            <i class="fa fa-chevron-circle-right"></i>
+                        </a>
                                         
                     <div class="navbar-header">
                         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
@@ -55,7 +59,7 @@
                     <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
                         <ul class="nav navbar-nav">                            
                                     <li><a href="/Cake.DocFx/docs">Documentation</a></li>
-        <li><a href="/Cake.DocFx/blog">Blog</a></li>
+        <li class="active"><a href="/Cake.DocFx/blog">Blog</a></li>
         <li><a href="/Cake.DocFx/api">API</a></li>
  
                         </ul>       
@@ -67,7 +71,7 @@
             </header>
             
             <!-- Left side column. contains the logo and sidebar -->
-            <aside class="main-sidebar hidden">
+            <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
     <div id="infobar-headings"></div>
@@ -78,6 +82,15 @@
 
                     <ul class="sidebar-menu">
                         
+
+    <li class="header"><i class="fa fa-bookmark"></i> Categories</li>    
+        <li><a href="/blog/release">Release</a></li>
+    
+    <li class="header"><i class="fa fa-calendar"></i> Archive</li>    
+        <li><a href="/blog/archive/2017/02">February, 2017</a></li>
+    
+    <li class="header"><i class="fa fa-user"></i> Authors</li>    
+        <li><a href="/blog/author/gep13">gep13</a></li>
 
                     </ul>
                 </section>                
@@ -90,16 +103,52 @@
 
 
 	<section class="content-header">
-		<h1>Cake.DocFx</h1>
+		<h1>Blog</h1>
 	</section>
 	<section class="content">
 		
-<div class="container">				
-	<h1>What is it?</h1>
-    <p>
-        The DocFx Addin for <a href="http://cakebuild.net/">Cake</a> allows you to generated API documentation directly from .NET source code.
-    </p>
-</div>
+
+        <h2><a href="/Cake.DocFx/blog/new-release-0.2.0">New Release - 0.2.0</a></h2>
+<dl class="dl-horizontal">
+    <dt><i class="fa fa-calendar"></i> Published</dt>
+    <dd>15 February 2017</dd>
+        <dt><i class="fa fa-bookmark"></i> Category</dt>
+        <dd><a href="/blog/release">Release</a></dd>
+            <dt><i class="fa fa-user"></i> Author</dt>
+        <dd><a href="/blog/author/gep13">gep13</a></dd>
+</dl>            <div>
+                <h1 id="long-time-no-release">Long time, no release</h1>
+<p>Thanks to a contribution from &#64;devlead, we are releasing 0.2.0 of Cake.DocFx.  This includes the following:</p>
+<h2 id="bug">Bug</h2>
+<ul>
+<li><a href="https://github.com/cake-contrib/Cake.DocFx/issues/9"><strong>#9</strong></a> Add lib folder structure to NuGet package</li>
+</ul>
+<h2 id="improvements">Improvements</h2>
+<ul>
+<li><a href="https://github.com/cake-contrib/Cake.DocFx/issues/19"><strong>#19</strong></a> Remove usage of obsolete Tool</li>
+<li><a href="https://github.com/cake-contrib/Cake.DocFx/issues/17"><strong>#17</strong></a> Upgrade to latest Cake</li>
+<li><a href="https://github.com/cake-contrib/Cake.DocFx/issues/12"><strong>#12</strong></a> Convert this repo to use Cake.Recipe</li>
+<li><a href="https://github.com/cake-contrib/Cake.DocFx/issues/7"><strong>#7</strong></a> Update NuGet Metadata</li>
+</ul>
+<h2 id="documentation">Documentation</h2>
+<ul>
+<li><a href="https://github.com/cake-contrib/Cake.DocFx/issues/18"><strong>#18</strong></a> Add Wyam Documentation generation</li>
+</ul>
+<p>It was decided that this was required due to the fact that with the impending release of Cake 0.18.0 all addins need to be at least 0.16.0, so we decided to upload to the latest.</p>
+<p>Please do not hesitate to reach out in the <a href="https://gitter.im/cake-contrib/Lobby">Gitter Channel</a> if you have any issues using this addin.</p>
+
+            </div>
+        <hr />
+    <nav>
+        <ul class="pager">
+            <li class="previous">                
+            </li>
+            <li class="next">
+            </li>
+        </ul>
+    </nav>
+
+
 	</section>
                 
             </div>           

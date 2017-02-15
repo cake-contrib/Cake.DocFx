@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+	<channel>
+		<title />
+		<link>http://cake-contrib.github.io/Cake.DocFx</link>
+		<description />
+		<copyright>2017</copyright>
+		<pubDate>Wed, 15 Feb 2017 20:12:06 GMT</pubDate>
+		<lastBuildDate>Wed, 15 Feb 2017 20:12:06 GMT</lastBuildDate>
+		<item>
+			<title>New Release - 0.2.0</title>
+			<link>http://cake-contrib.github.io/Cake.DocFx/blog/new-release-0.2.0</link>
+			<description>&lt;p&gt;Thanks to a contribution from @devlead, we are releasing 0.2.0 of Cake.DocFx.  This includes the following:&lt;/p&gt;</description>
+			<author>gep13</author>
+			<guid>http://cake-contrib.github.io/Cake.DocFx/blog/new-release-0.2.0</guid>
+			<pubDate>Wed, 15 Feb 2017 00:00:00 GMT</pubDate>
+		</item>
+	</channel>
+</rss>
