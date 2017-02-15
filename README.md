@@ -1,34 +1,35 @@
-# Cake.DocFx
-
-![nuget release](https://img.shields.io/nuget/vpre/Cake.DocFx.svg)
+# Cake.DocFx Addin
 
 This Addin for the Cake Build Automation System allows you to generate a documentation website with [docfx](http://dotnet.github.io/docfx/index.html). More about Cake at http://cakebuild.net
 
-## Use the addin
+[![License](http://img.shields.io/:license-mit-blue.svg)](http://cake-contrib.mit-license.org)
 
-To use docfx in your cake file simply import it and the docfx tool. Then define a doc task.
-```cake
-#addin "Cake.DocFx"
-#tool "docfx.console"
+## Information
 
-Task("doc").Does(() => DocFx());
-```
->   Do not forget to load '#tool "docfx.console"' at top of your cake file. Otherwise, you can not run the `DocFx()` command. 
+||Stable|Pre-release|
+|:--:|:--:|:--:|
+|GitHub Release|-|[![GitHub release](https://img.shields.io/github/release/cake-contrib/Cake.DocFx.svg)](https://github.com/cake-contrib/Cake.DocFx/releases/latest)|
+|NuGet|[![NuGet](https://img.shields.io/nuget/v/Cake.DocFx.svg)](https://www.nuget.org/packages/Cake.DocFx)|[![NuGet](https://img.shields.io/nuget/vpre/Cake.DocFx.svg)](https://www.nuget.org/packages/Cake.DocFx)|
 
+## Build Status
 
+|Develop|Master|
+|:--:|:--:|
+|[![Build status](https://ci.appveyor.com/api/projects/status/clgjyeqo4n0j232i/branch/develop?svg=true)](https://ci.appveyor.com/project/cakecontrib/cake-docfx/branch/develop)|[![Build status](https://ci.appveyor.com/api/projects/status/clgjyeqo4n0j232i/branch/develop?svg=true)](https://ci.appveyor.com/project/cakecontrib/cake-docfx/branch/master)|
 
-If the `docfx.json` file is anywhere else then the root directory you can pass in the location as parameter.
+## Code Coverage
 
-```cake
-#addin "Cake.DocFx"
-#tool "docfx.console"
+[![Coverage Status](https://coveralls.io/repos/github/cake-contrib/Cake.DocFx/badge.svg?branch=develop)](https://coveralls.io/github/cake-contrib/Cake.DocFx?branch=develop)
 
-Task("doc").Does(() => DocFx("./docs/docfx.json"));
-```
+## Quick Links
 
->   **INFO**
->   
->   The `DocFx` command requires an existing `docfx.json` file. To bootstrap docfx use `docfx init` or `./tools/docfx.console/tools/docfx.exe init`.
+- [Documentation](https://cake-contrib.github.io/Cake.DocFx)
+
+## Chat Room
+
+Come join in the conversation about Cake.DocFx in our Gitter Chat Room
+
+[![Join the chat at https://gitter.im/cake-contrib/Lobby](https://badges.gitter.im/cake-contrib/Lobby.svg)](https://gitter.im/cake-contrib/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 ## Build
 
@@ -41,8 +42,8 @@ On Windows PowerShell run:
 ```
 
 On OSX/Linux run:
+
 ```bash
 ./build.sh
 ```
 
-Run `-t pack` alias to create a nuget package.
