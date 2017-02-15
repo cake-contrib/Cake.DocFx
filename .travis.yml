@@ -1,0 +1,10 @@
+language: csharp
+script:
+  - ./build.sh -v diagnostic
+os:
+  - linux
+  - osx
+cache:
+  directories:
+    - packages
+    - tools
