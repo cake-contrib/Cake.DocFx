@@ -10,7 +10,7 @@ BuildParameters.SetParameters(context: Context,
                             repositoryName: "Cake.DocFx",
                             appVeyorAccountName: "cakecontrib");
 
-BuildParameters.PrintParamters(Context);
+BuildParameters.PrintParameters(Context);
 
 ToolSettings.SetToolSettings(context: Context,
                             dupFinderExcludePattern: new string[] { 
