@@ -6,7 +6,7 @@ This Addin for the Cake Build Automation System allows you to generate a documen
 
 ## Information
 
-||Stable|Pre-release|
+| |Stable|Pre-release|
 |:--:|:--:|:--:|
 |GitHub Release|-|[![GitHub release](https://img.shields.io/github/release/cake-contrib/Cake.DocFx.svg)](https://github.com/cake-contrib/Cake.DocFx/releases/latest)|
 |NuGet|[![NuGet](https://img.shields.io/nuget/v/Cake.DocFx.svg)](https://www.nuget.org/packages/Cake.DocFx)|[![NuGet](https://img.shields.io/nuget/vpre/Cake.DocFx.svg)](https://www.nuget.org/packages/Cake.DocFx)|
