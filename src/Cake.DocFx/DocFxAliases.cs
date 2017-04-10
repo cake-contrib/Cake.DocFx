@@ -22,7 +22,7 @@ namespace Cake.DocFx
         /// </code>
         /// </example>
         [CakeMethodAlias]
-        [CakeAliasCategory("Documentation")]
+        [CakeAliasCategory("Build")]
         public static void DocFx(this ICakeContext context)
             => context.DocFx(null, null);
 
@@ -37,7 +37,7 @@ namespace Cake.DocFx
         /// </code>
         /// </example>
         [CakeMethodAlias]
-        [CakeAliasCategory("Documentation")]
+        [CakeAliasCategory("Build")]
         public static void DocFx(this ICakeContext context, FilePath configFile)
             => context.DocFx(configFile, null);
 
@@ -55,7 +55,7 @@ namespace Cake.DocFx
         /// </code>
         /// </example>
         [CakeMethodAlias]
-        [CakeAliasCategory("Documentation")]
+        [CakeAliasCategory("Build")]
         public static void DocFx(this ICakeContext context, DocFxSettings settings)
             => context.DocFx(null, settings);
 
@@ -74,7 +74,7 @@ namespace Cake.DocFx
         /// </code>
         /// </example>
         [CakeMethodAlias]
-        [CakeAliasCategory("Documentation")]
+        [CakeAliasCategory("Build")]
         public static void DocFx(this ICakeContext context, FilePath configFile, DocFxSettings settings)
         {
             Contract.NotNull(context, nameof(context));
@@ -95,7 +95,7 @@ namespace Cake.DocFx
         /// </code>
         /// </example>
         [CakeMethodAlias]
-        [CakeAliasCategory("Documentation")]
+        [CakeAliasCategory("Build")]
         public static void DocFxBuild(this ICakeContext context) => context.DocFxBuild(null, null);
 
         /// <summary>
@@ -109,7 +109,7 @@ namespace Cake.DocFx
         /// </code>
         /// </example>
         [CakeMethodAlias]
-        [CakeAliasCategory("Documentation")]
+        [CakeAliasCategory("Build")]
         public static void DocFxBuild(this ICakeContext context, FilePath configFile)
             => context.DocFxBuild(configFile, null);
 
@@ -128,7 +128,7 @@ namespace Cake.DocFx
         /// </code>
         /// </example>
         [CakeMethodAlias]
-        [CakeAliasCategory("Documentation")]
+        [CakeAliasCategory("Build")]
         public static void DocFxBuild(this ICakeContext context, DocFxBuildSettings settings)
             => context.DocFxBuild(null, settings);
 
@@ -148,7 +148,7 @@ namespace Cake.DocFx
         /// </code>
         /// </example>
         [CakeMethodAlias]
-        [CakeAliasCategory("Documentation")]
+        [CakeAliasCategory("Build")]
         public static void DocFxBuild(this ICakeContext context, FilePath configFile, DocFxBuildSettings settings)
         {
             Contract.NotNull(context, nameof(context));
@@ -169,7 +169,7 @@ namespace Cake.DocFx
         /// </code>
         /// </example>
         [CakeMethodAlias]
-        [CakeAliasCategory("Documentation")]
+        [CakeAliasCategory("Metadata")]
         public static void DocFxMetadata(this ICakeContext context)
             => context.DocFxMetadata((DocFxMetadataSettings) null);
 
@@ -184,7 +184,7 @@ namespace Cake.DocFx
         /// </code>
         /// </example>
         [CakeMethodAlias]
-        [CakeAliasCategory("Documentation")]
+        [CakeAliasCategory("Metadata")]
         public static void DocFxMetadata(this ICakeContext context, FilePath configFile)
         {
             context.DocFxMetadata(new DocFxMetadataSettings
@@ -205,7 +205,7 @@ namespace Cake.DocFx
         /// </code>
         /// </example>
         [CakeMethodAlias]
-        [CakeAliasCategory("Documentation")]
+        [CakeAliasCategory("Metadata")]
         public static void DocFxMetadata(this ICakeContext context, IEnumerable<FilePath> files)
         {
             context.DocFxMetadata(new DocFxMetadataSettings
@@ -237,7 +237,7 @@ namespace Cake.DocFx
         /// </code>
         /// </example>
         [CakeMethodAlias]
-        [CakeAliasCategory("Documentation")]
+        [CakeAliasCategory("Metadata")]
         public static void DocFxMetadata(this ICakeContext context, DocFxMetadataSettings settings)
         {
             Contract.NotNull(context, nameof(context));
@@ -258,7 +258,7 @@ namespace Cake.DocFx
         /// </code>
         /// </example>
         [CakeMethodAlias]
-        [CakeAliasCategory("Documentation")]
+        [CakeAliasCategory("Init")]
         public static void DocFxInit(this ICakeContext context)
             => context.DocFxInit((DocFxInitSettings)null);
 
@@ -285,7 +285,7 @@ namespace Cake.DocFx
         /// </code>
         /// </example>
         [CakeMethodAlias]
-        [CakeAliasCategory("Documentation")]
+        [CakeAliasCategory("Init")]
         public static void DocFxInit(this ICakeContext context, DocFxInitSettings settings)
         {
             Contract.NotNull(context, nameof(context));
