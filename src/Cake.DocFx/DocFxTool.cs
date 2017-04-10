@@ -9,7 +9,7 @@ namespace Cake.DocFx
     /// Base class for the DocFx runners.
     /// </summary>
     /// <typeparam name="TSettings">The type of tool settings to use.</typeparam>
-    public abstract class DocFxTool<TSettings> : Tool<TSettings>
+    internal abstract class DocFxTool<TSettings> : Tool<TSettings>
         where TSettings : ToolSettings
     {
         /// <summary>

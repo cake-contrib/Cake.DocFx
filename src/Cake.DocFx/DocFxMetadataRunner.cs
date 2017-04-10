@@ -8,7 +8,7 @@ namespace Cake.DocFx
     /// <summary>
     /// Command line runner for the 'docfx metadata' command.
     /// </summary>
-    public sealed class DocFxMetadataRunner : DocFxTool<DocFxMetadataSettings>
+    internal sealed class DocFxMetadataRunner : DocFxTool<DocFxMetadataSettings>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="DocFxMetadataRunner"/> class.

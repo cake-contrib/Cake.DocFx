@@ -8,7 +8,7 @@ namespace Cake.DocFx
     /// <summary>
     /// Command line runner for the 'docfx init' command.
     /// </summary>
-    public sealed class DocFxInitRunner : DocFxTool<DocFxInitSettings>
+    internal sealed class DocFxInitRunner : DocFxTool<DocFxInitSettings>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="DocFxInitRunner"/> class.
