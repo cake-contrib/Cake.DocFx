@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/Cake.DocFx/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/Cake.DocFx/assets/img/favicon.ico" type="image/x-icon">
-        <title>Docs - API - DocFxSettings.OutputPath Property</title>
+        <title>Docs - API - DocFxInitSettings.OnlyConfigFile Property</title>
         <link href="/Cake.DocFx/assets/css/mermaid.css" rel="stylesheet">
         <link href="/Cake.DocFx/assets/css/highlight.css" rel="stylesheet">
         <link href="/Cake.DocFx/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
@@ -128,10 +128,11 @@
 			<li class="header">Namespace</li>
 		<li><a href="/Cake.DocFx/api/Cake.DocFx">Cake<wbr>.DocFx</a></li>
 		<li class="header">Type</li>
-		<li><a href="/Cake.DocFx/api/Cake.DocFx/DocFxSettings">DocFxSettings</a></li>
+		<li><a href="/Cake.DocFx/api/Cake.DocFx/DocFxInitSettings">DocFxInitSettings</a></li>
 		<li role="separator" class="divider"></li>
 			<li class="header">Property Members</li>
-				<li class="selected"><a href="/Cake.DocFx/api/Cake.DocFx/DocFxSettings/47BD6940">OutputPath</a></li>
+				<li class="selected"><a href="/Cake.DocFx/api/Cake.DocFx/DocFxInitSettings/1596EDD3">OnlyConfigFile</a></li>
+				<li><a href="/Cake.DocFx/api/Cake.DocFx/DocFxInitSettings/CB134C10">OutputPath</a></li>
 
 
                     </ul>
@@ -145,15 +146,16 @@
 
 
 <section class="content-header">
-			<h3><a href="/Cake.DocFx/api/Cake.DocFx/DocFxSettings">DocFxSettings</a>.</h3>
-	<h1>OutputPath <small>Property</small></h1>
+			<h3><a href="/Cake.DocFx/api/Cake.DocFx/DocFxInitSettings">DocFxInitSettings</a>.</h3>
+	<h1>OnlyConfigFile <small>Property</small></h1>
 </section>
 <section class="content">
 	
 	
 		<h1 id="Summary">Summary</h1>
 	<div class="lead">
-    Gets or sets the output folder. The default is _site, and is configured in the 'build' section of docfx.json.
+    Gets or sets a flag indicating if only the <pre><code class="cs">docfx.json</code></pre> file should be generated.
+    In this case no project folder will be generated.
     </div>
 
 		<div class="panel panel-default">
@@ -164,14 +166,14 @@
 						<dd><a href="/Cake.DocFx/api/Cake.DocFx">Cake<wbr>.DocFx</a></dd>
 					
 						<dt>Containing Type</dt>
-						<dd><a href="/Cake.DocFx/api/Cake.DocFx/DocFxSettings">DocFxSettings</a></dd>		
+						<dd><a href="/Cake.DocFx/api/Cake.DocFx/DocFxInitSettings">DocFxInitSettings</a></dd>		
 					
 				</dl>
   			</div>
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public DirectoryPath OutputPath { get; set; }</code></pre>
+	<pre><code>public bool OnlyConfigFile { get; set; }</code></pre>
 
 
 
@@ -188,7 +190,7 @@
 					</tr>
 				</thead>
 				<tbody><tr>
-					<td>DirectoryPath</td>
+					<td>bool</td>
 					<td></td>
 				</tr>
 			</tbody></table>

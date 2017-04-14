@@ -15,7 +15,7 @@
         <link href="//fonts.googleapis.com/css?family=Roboto+Mono:400,700|Roboto:400,400i,700,700i" rel="stylesheet">
         <link href="/Cake.DocFx/assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
         <link href="/Cake.DocFx/assets/css/override.css" rel="stylesheet">
-        <script src="/Cake.DocFx/assets/js/jQuery-2.2.3.min.js"></script>
+        <script src="/Cake.DocFx/assets/js/jquery-2.2.3.min.js"></script>
         <script src="/Cake.DocFx/assets/js/bootstrap.min.js"></script>        
         <script src="/Cake.DocFx/assets/js/app.min.js"></script>         
         <script src="/Cake.DocFx/assets/js/highlight.pack.js"></script>   
@@ -133,6 +133,8 @@
 				<li class="selected"><a href="/Cake.DocFx/api/Cake.DocFx/DocFxAliases">DocFxAliases</a></li>
 				<li><a href="/Cake.DocFx/api/Cake.DocFx/DocFxBuildRunner">DocFxBuildRunner</a></li>
 				<li><a href="/Cake.DocFx/api/Cake.DocFx/DocFxBuildSettings">DocFxBuildSettings</a></li>
+				<li><a href="/Cake.DocFx/api/Cake.DocFx/DocFxInitRunner">DocFxInitRunner</a></li>
+				<li><a href="/Cake.DocFx/api/Cake.DocFx/DocFxInitSettings">DocFxInitSettings</a></li>
 				<li><a href="/Cake.DocFx/api/Cake.DocFx/DocFxMetadataRunner">DocFxMetadataRunner</a></li>
 				<li><a href="/Cake.DocFx/api/Cake.DocFx/DocFxMetadataSettings">Doc<wbr>Fx<wbr>Metadata<wbr>Settings</a></li>
 				<li><a href="/Cake.DocFx/api/Cake.DocFx/DocFxRunner">DocFxRunner</a></li>
@@ -311,6 +313,26 @@ public static class DocFxAliases</code></pre>
 								<td>
 									<div>
     Builds markdown only using DocFx, with the specified settings. This will not build API documentation.
+    </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/Cake.DocFx/api/Cake.DocFx/DocFxAliases/26B4EBA9">DocFxInit<wbr>(ICakeContext)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Generate an initial <pre><code class="cs">docfx.json</code></pre> file.
+    </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/Cake.DocFx/api/Cake.DocFx/DocFxAliases/020726CB">DocFxInit<wbr>(ICakeContext, <wbr>DocFxInitSettings)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Generate an initial <pre><code class="cs">docfx.json</code></pre> file, with the specified settings.
     </div>
 											<div><small><em>static</em></small></div>
 								</td>

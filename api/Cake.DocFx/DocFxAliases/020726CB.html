@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/Cake.DocFx/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/Cake.DocFx/assets/img/favicon.ico" type="image/x-icon">
-        <title>Docs - API - DocFxSettings.OutputPath Property</title>
+        <title>Docs - API - DocFxAliases.DocFxInit(ICakeContext, DocFxInitSettings) Method</title>
         <link href="/Cake.DocFx/assets/css/mermaid.css" rel="stylesheet">
         <link href="/Cake.DocFx/assets/css/highlight.css" rel="stylesheet">
         <link href="/Cake.DocFx/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
@@ -74,7 +74,10 @@
                     	
 	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
 <p><a href="#Syntax">Syntax</a></p>
-<p><a href="#Value">Value</a></p>
+<p><a href="#Examples">Examples</a></p>
+<p><a href="#Attributes">Attributes</a></p>
+<p><a href="#Parameters">Parameters</a></p>
+<p><a href="#ReturnValue">Return Value</a></p>
 <hr class="infobar-hidden">
 </div>
 
@@ -128,10 +131,23 @@
 			<li class="header">Namespace</li>
 		<li><a href="/Cake.DocFx/api/Cake.DocFx">Cake<wbr>.DocFx</a></li>
 		<li class="header">Type</li>
-		<li><a href="/Cake.DocFx/api/Cake.DocFx/DocFxSettings">DocFxSettings</a></li>
+		<li><a href="/Cake.DocFx/api/Cake.DocFx/DocFxAliases">DocFxAliases</a></li>
 		<li role="separator" class="divider"></li>
-			<li class="header">Property Members</li>
-				<li class="selected"><a href="/Cake.DocFx/api/Cake.DocFx/DocFxSettings/47BD6940">OutputPath</a></li>
+			<li class="header">Method Members</li>
+				<li><a href="/Cake.DocFx/api/Cake.DocFx/DocFxAliases/2C7371BA">DocFx<wbr>(ICakeContext)<wbr></a></li>
+				<li><a href="/Cake.DocFx/api/Cake.DocFx/DocFxAliases/254C90C6">DocFx<wbr>(ICakeContext, <wbr>FilePath)<wbr></a></li>
+				<li><a href="/Cake.DocFx/api/Cake.DocFx/DocFxAliases/28FFBAB4">DocFx<wbr>(ICakeContext, <wbr>DocFxSettings)<wbr></a></li>
+				<li><a href="/Cake.DocFx/api/Cake.DocFx/DocFxAliases/46F59EC6">DocFx<wbr>(ICakeContext, <wbr>FilePath, <wbr>DocFxSettings)<wbr></a></li>
+				<li><a href="/Cake.DocFx/api/Cake.DocFx/DocFxAliases/E7B6B8A0">DocFxBuild<wbr>(ICakeContext)<wbr></a></li>
+				<li><a href="/Cake.DocFx/api/Cake.DocFx/DocFxAliases/46638C35">DocFxBuild<wbr>(ICakeContext, <wbr>FilePath)<wbr></a></li>
+				<li><a href="/Cake.DocFx/api/Cake.DocFx/DocFxAliases/360D6531">DocFxBuild<wbr>(ICakeContext, <wbr>DocFxBuildSettings)<wbr></a></li>
+				<li><a href="/Cake.DocFx/api/Cake.DocFx/DocFxAliases/1F029410">DocFxBuild<wbr>(ICakeContext, <wbr>FilePath, <wbr>DocFxBuildSettings)<wbr></a></li>
+				<li><a href="/Cake.DocFx/api/Cake.DocFx/DocFxAliases/26B4EBA9">DocFxInit<wbr>(ICakeContext)<wbr></a></li>
+				<li class="selected"><a href="/Cake.DocFx/api/Cake.DocFx/DocFxAliases/020726CB">DocFxInit<wbr>(ICakeContext, <wbr>DocFxInitSettings)<wbr></a></li>
+				<li><a href="/Cake.DocFx/api/Cake.DocFx/DocFxAliases/69ED53D4">DocFxMetadata<wbr>(ICakeContext)<wbr></a></li>
+				<li><a href="/Cake.DocFx/api/Cake.DocFx/DocFxAliases/31EA4302">DocFxMetadata<wbr>(ICakeContext, <wbr>FilePath)<wbr></a></li>
+				<li><a href="/Cake.DocFx/api/Cake.DocFx/DocFxAliases/F8AC733A">DocFxMetadata<wbr>(ICakeContext, <wbr>IEnumerable<wbr>&lt;FilePath&gt;<wbr>)<wbr></a></li>
+				<li><a href="/Cake.DocFx/api/Cake.DocFx/DocFxAliases/0C17A214">DocFxMetadata<wbr>(ICakeContext, <wbr>Doc<wbr>Fx<wbr>Metadata<wbr>Settings)<wbr></a></li>
 
 
                     </ul>
@@ -145,39 +161,101 @@
 
 
 <section class="content-header">
-			<h3><a href="/Cake.DocFx/api/Cake.DocFx/DocFxSettings">DocFxSettings</a>.</h3>
-	<h1>OutputPath <small>Property</small></h1>
+			<h3><a href="/Cake.DocFx/api/Cake.DocFx/DocFxAliases">DocFxAliases</a>.</h3>
+	<h1>DocFxInit<wbr>(ICakeContext, <wbr>DocFxInitSettings)<wbr> <small>Method</small></h1>
 </section>
 <section class="content">
 	
 	
 		<h1 id="Summary">Summary</h1>
 	<div class="lead">
-    Gets or sets the output folder. The default is _site, and is configured in the 'build' section of docfx.json.
+    Generate an initial <pre><code class="cs">docfx.json</code></pre> file, with the specified settings.
     </div>
 
 		<div class="panel panel-default">
-  			<div class="panel-body">
+  			<div class="panel-body">	
 				<dl class="dl-horizontal">	
 						
 						<dt>Namespace</dt>
 						<dd><a href="/Cake.DocFx/api/Cake.DocFx">Cake<wbr>.DocFx</a></dd>
 					
 						<dt>Containing Type</dt>
-						<dd><a href="/Cake.DocFx/api/Cake.DocFx/DocFxSettings">DocFxSettings</a></dd>		
+						<dd><a href="/Cake.DocFx/api/Cake.DocFx/DocFxAliases">DocFxAliases</a></dd>		
 					
 				</dl>
   			</div>
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public DirectoryPath OutputPath { get; set; }</code></pre>
+	<pre><code>[CakeMethodAlias]
+[CakeAliasCategory("Documentation")]
+public static void DocFxInit(this ICakeContext context, DocFxInitSettings settings)</code></pre>
+
+	<h1 id="Examples">Examples</h1>
+	<div>
+    <pre><code class="cs">DocFxInit(new DocFxInitSettings()
+{
+    OutputPath = "./docs"
+});</code></pre>
+    
+
+    <pre><code class="cs">DocFxInit(new DocFxInitSettings()
+{
+    OutputPath = "./docs",
+    OnlyConfigFile = true
+});</code></pre>
+    </div>
 
 
+	<h1 id="Attributes">Attributes</h1>
+	<div class="box">
+		<div class="box-body no-padding table-responsive">
+			<table class="table table-striped table-hover two-cols">
+				<thead>
+					<tr>
+						<th>Type</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+					<tbody><tr>
+						<td>CakeMethodAlias</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>CakeAliasCategory</td>
+						<td></td>
+					</tr>
+			</tbody></table>
+		</div>
+	</div>	
 
 
+	<h1 id="Parameters">Parameters</h1>
+	<div class="box">
+		<div class="box-body no-padding table-responsive">
+			<table class="table table-striped table-hover three-cols">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Type</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+					<tbody><tr>
+						<td>context</td>
+						<td>ICakeContext</td>
+						<td>The Cake context.</td>
+					</tr>
+					<tr>
+						<td>settings</td>
+						<td><a href="/Cake.DocFx/api/Cake.DocFx/DocFxInitSettings">DocFxInitSettings</a></td>
+						<td>The DocFx settings.</td>
+					</tr>
+			</tbody></table>
+		</div>
+	</div>	
 
-	<h1 id="Value">Value</h1>
+	<h1 id="ReturnValue">Return Value</h1>
 	<div class="box">
 		<div class="box-body no-padding table-responsive">
 			<table class="table table-striped table-hover two-cols">
@@ -188,7 +266,7 @@
 					</tr>
 				</thead>
 				<tbody><tr>
-					<td>DirectoryPath</td>
+					<td>void</td>
 					<td></td>
 				</tr>
 			</tbody></table>

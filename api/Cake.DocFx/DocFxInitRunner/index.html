@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/Cake.DocFx/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/Cake.DocFx/assets/img/favicon.ico" type="image/x-icon">
-        <title>Docs - API - DocFxSettings.OutputPath Property</title>
+        <title>Docs - API - DocFxInitRunner Class</title>
         <link href="/Cake.DocFx/assets/css/mermaid.css" rel="stylesheet">
         <link href="/Cake.DocFx/assets/css/highlight.css" rel="stylesheet">
         <link href="/Cake.DocFx/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
@@ -74,7 +74,8 @@
                     	
 	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
 <p><a href="#Syntax">Syntax</a></p>
-<p><a href="#Value">Value</a></p>
+<p><a href="#Constructors">Constructors</a></p>
+<p><a href="#Methods">Methods</a></p>
 <hr class="infobar-hidden">
 </div>
 
@@ -127,11 +128,18 @@
                         
 			<li class="header">Namespace</li>
 		<li><a href="/Cake.DocFx/api/Cake.DocFx">Cake<wbr>.DocFx</a></li>
-		<li class="header">Type</li>
-		<li><a href="/Cake.DocFx/api/Cake.DocFx/DocFxSettings">DocFxSettings</a></li>
 		<li role="separator" class="divider"></li>
-			<li class="header">Property Members</li>
-				<li class="selected"><a href="/Cake.DocFx/api/Cake.DocFx/DocFxSettings/47BD6940">OutputPath</a></li>
+			<li class="header">Class Types</li>
+				<li><a href="/Cake.DocFx/api/Cake.DocFx/DocFxAliases">DocFxAliases</a></li>
+				<li><a href="/Cake.DocFx/api/Cake.DocFx/DocFxBuildRunner">DocFxBuildRunner</a></li>
+				<li><a href="/Cake.DocFx/api/Cake.DocFx/DocFxBuildSettings">DocFxBuildSettings</a></li>
+				<li class="selected"><a href="/Cake.DocFx/api/Cake.DocFx/DocFxInitRunner">DocFxInitRunner</a></li>
+				<li><a href="/Cake.DocFx/api/Cake.DocFx/DocFxInitSettings">DocFxInitSettings</a></li>
+				<li><a href="/Cake.DocFx/api/Cake.DocFx/DocFxMetadataRunner">DocFxMetadataRunner</a></li>
+				<li><a href="/Cake.DocFx/api/Cake.DocFx/DocFxMetadataSettings">Doc<wbr>Fx<wbr>Metadata<wbr>Settings</a></li>
+				<li><a href="/Cake.DocFx/api/Cake.DocFx/DocFxRunner">DocFxRunner</a></li>
+				<li><a href="/Cake.DocFx/api/Cake.DocFx/DocFxSettings">DocFxSettings</a></li>
+				<li><a href="/Cake.DocFx/api/Cake.DocFx/DocFxTool_1">DocFxTool<wbr>&lt;TSettings&gt;<wbr></a></li>
 
 
                     </ul>
@@ -145,55 +153,107 @@
 
 
 <section class="content-header">
-			<h3><a href="/Cake.DocFx/api/Cake.DocFx/DocFxSettings">DocFxSettings</a>.</h3>
-	<h1>OutputPath <small>Property</small></h1>
+	<h1>DocFxInitRunner <small>Class</small></h1>
 </section>
 <section class="content">
 	
 	
 		<h1 id="Summary">Summary</h1>
 	<div class="lead">
-    Gets or sets the output folder. The default is _site, and is configured in the 'build' section of docfx.json.
+    Command line runner for the 'docfx init' command.
     </div>
 
 		<div class="panel panel-default">
   			<div class="panel-body">
-				<dl class="dl-horizontal">	
-						
-						<dt>Namespace</dt>
-						<dd><a href="/Cake.DocFx/api/Cake.DocFx">Cake<wbr>.DocFx</a></dd>
-					
-						<dt>Containing Type</dt>
-						<dd><a href="/Cake.DocFx/api/Cake.DocFx/DocFxSettings">DocFxSettings</a></dd>		
-					
-				</dl>
+				<div class="row">
+					<div class="col-md-6">
+						<dl class="dl-horizontal">		
+
+								<dt>Namespace</dt>
+								<dd><a href="/Cake.DocFx/api/Cake.DocFx">Cake<wbr>.DocFx</a></dd>
+											
+							
+								<dt>Base Types</dt>
+								<dd>
+									<ul class="list-unstyled">										
+											<li>Tool<wbr>&lt;<wbr>Doc<wbr>Fx<wbr>Init<wbr>Settings&gt;<wbr></li>								
+											<li>DocFxTool<wbr>&lt;<wbr>Doc<wbr>Fx<wbr>Init<wbr>Settings&gt;<wbr></li>								
+									</ul>
+								</dd>				
+							
+							
+						</dl>
+					</div>		
+					<div class="col-md-6">
+						<div class="mermaid">
+							graph TD
+	Base0["DocFxTool&lt;DocFxInitSettings&gt;"]--&gt;Type
+	Base1["Tool&lt;DocFxInitSettings&gt;"]--&gt;Base0
+	Type["DocFxInitRunner"]
+class Type type-node
+
+						</div>
+					</div>
+				</div>
   			</div>
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public DirectoryPath OutputPath { get; set; }</code></pre>
+	<pre><code>public sealed class DocFxInitRunner : DocFxTool&lt;DocFxInitSettings&gt;</code></pre>
 
 
 
 
 
-	<h1 id="Value">Value</h1>
-	<div class="box">
-		<div class="box-body no-padding table-responsive">
-			<table class="table table-striped table-hover two-cols">
-				<thead>
-					<tr>
-						<th>Type</th>
-						<th>Description</th>
-					</tr>
-				</thead>
-				<tbody><tr>
-					<td>DirectoryPath</td>
-					<td></td>
-				</tr>
-			</tbody></table>
-		</div>
-	</div>	
+
+			<h1 id="Constructors">Constructors</h1>
+			<div class="box">
+				<div class="box-body no-padding table-responsive">
+					<table class="table table-striped table-hover two-cols">
+						<thead>
+							<tr>
+								<th>Name</th>
+									<th>Summary</th>
+							</tr>
+						</thead>
+							<tbody><tr>
+								<td><a href="/Cake.DocFx/api/Cake.DocFx/DocFxInitRunner/F6D4D6FD">DocFxInitRunner<wbr>(IFileSystem, <wbr>ICakeEnvironment, <wbr>IProcessRunner, <wbr>IToolLocator)<wbr></a></td>
+									<td>
+    Initializes a new instance of the <code class="cs"><a href="/Cake.DocFx/api/Cake.DocFx/DocFxInitRunner">DocFxInitRunner</a></code> class.
+    </td>
+							</tr>
+					</tbody></table>
+				</div>
+			</div>
+		
+
+
+
+
+			<h1 id="Methods">Methods</h1>
+			<div class="box">
+				<div class="box-body no-padding table-responsive">
+					<table class="table table-striped table-hover three-cols">
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>Value</th>
+								<th>Summary</th>
+							</tr>
+						</thead>
+							<tbody><tr>
+								<td><a href="/Cake.DocFx/api/Cake.DocFx/DocFxInitRunner/D435AD71">Run<wbr>(DocFxInitSettings)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+    Runs DocFx generator with the given configuration.
+    </div>
+								</td>
+							</tr>
+					</tbody></table>
+				</div>
+			</div>
+		
 
 
 	
