@@ -3,7 +3,7 @@ using Cake.Core.IO;
 using Cake.Core.Tooling;
 using Cake.DocFx.Helper;
 
-namespace Cake.DocFx
+namespace Cake.DocFx.Init
 {
     /// <summary>
     /// Command line runner for the 'docfx init' command.
