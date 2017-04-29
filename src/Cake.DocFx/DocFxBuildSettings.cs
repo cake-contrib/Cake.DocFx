@@ -26,6 +26,7 @@ namespace Cake.DocFx
         /// <summary>
         /// Gets global metadata.
         /// It overrides the globalMetadata settings from the config file.
+        /// See <see cref="DocFxGlobalMetadata"/> for constants for metadata keys.
         /// </summary>
         public Dictionary<string, string> GlobalMetadata => _globalMetadata;
     }
