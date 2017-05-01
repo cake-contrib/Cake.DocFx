@@ -6,7 +6,7 @@ using Cake.DocFx.Helper;
 namespace Cake.DocFx.Init
 {
     /// <summary>
-    /// Command line runner for the 'docfx init' command.
+    /// Command line runner for the <c>docfx init</c> command.
     /// </summary>
     internal sealed class DocFxInitRunner : DocFxTool<DocFxInitSettings>
     {

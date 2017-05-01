@@ -6,7 +6,7 @@ using Cake.Core.Tooling;
 namespace Cake.DocFx.Metadata
 {
     /// <summary>
-    /// Command line runner for the 'docfx metadata' command.
+    /// Command line runner for the <c>docfx metadata</c> command.
     /// </summary>
     internal sealed class DocFxMetadataRunner : DocFxTool<DocFxMetadataSettings>
     {
