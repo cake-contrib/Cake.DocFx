@@ -35,6 +35,22 @@
                 // Then
                 Assert.Equal("build --globalMetadata \"{\\\"foo\\\": \\\"bar\\\"}\"", result.Args);
             }
+
+            [Fact]
+            public void Should_Add_Serve_To_Arguments_If_True()
+            {
+                // Given
+                var fixture = new DocFxBuildRunnerFixture
+                {
+                    Settings = {Serve = true}
+                };
+
+                // When
+                var result = fixture.Run();
+
+                // Then
+                Assert.Equal("build --serve", result.Args);
+            }
         }
     }
 }

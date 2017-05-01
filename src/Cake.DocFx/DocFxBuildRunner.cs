@@ -57,6 +57,11 @@ namespace Cake.DocFx
                     "--globalMetadata \"{{{0}}}\"",
                     string.Join(", ", settings.GlobalMetadata.Select(x => $"\\\"{x.Key}\\\": \\\"{x.Value}\\\"")));
 
+            if (settings.Serve)
+            {
+                builder.Append("--serve");
+            }
+
             return builder;
         }
     }

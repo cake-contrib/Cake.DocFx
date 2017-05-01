@@ -29,5 +29,11 @@ namespace Cake.DocFx
         /// See <see cref="DocFxGlobalMetadata"/> for constants for metadata keys.
         /// </summary>
         public Dictionary<string, string> GlobalMetadata => _globalMetadata;
+
+        /// <summary>
+        /// Gets or sets a value indicating whether to enable previewing of the generated documentation
+        /// in a built in web server. 
+        /// </summary>
+        public bool Serve { get; set; }
     }
 }
