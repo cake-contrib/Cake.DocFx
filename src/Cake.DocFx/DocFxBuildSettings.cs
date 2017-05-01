@@ -1,4 +1,5 @@
-﻿using Cake.Core.IO;
+﻿using System.Collections.Generic;
+using Cake.Core.IO;
 using Cake.Core.Tooling;
 
 namespace Cake.DocFx
@@ -8,6 +9,8 @@ namespace Cake.DocFx
     /// </summary>
     public class DocFxBuildSettings : ToolSettings
     {
+        private readonly Dictionary<string, string> _globalMetadata = new Dictionary<string, string>();
+
         /// <summary>
         /// Gets or sets the output folder. The default is _site, and is configured in the 'build' 
         /// section of docfx.json.
@@ -19,5 +22,12 @@ namespace Cake.DocFx
         /// in the 'build' section of docfx.json will be used.
         /// </summary>
         public DirectoryPath TemplateFolder { get; set; }
+
+        /// <summary>
+        /// Gets global metadata.
+        /// It overrides the globalMetadata settings from the config file.
+        /// See <see cref="DocFxGlobalMetadata"/> for constants for metadata keys.
+        /// </summary>
+        public Dictionary<string, string> GlobalMetadata => _globalMetadata;
     }
 }
