@@ -55,7 +55,6 @@
     <Compile Include="DocFxGlobalMetadata.cs" />
     <Compile Include="Init\DocFxInitRunner.cs" />
     <Compile Include="Init\DocFxInitSettings.cs" />
-    <Compile Include="DocFxRunner.cs" />
     <Compile Include="DocFxSettings.cs" />
     <Compile Include="DocFxTool.cs" />
     <Compile Include="Helper\Contract.cs" />
