@@ -7,7 +7,7 @@ using Cake.DocFx.Helper;
 namespace Cake.DocFx.Build
 {
     /// <summary>
-    /// Command line runner for the 'docfx build' command.
+    /// Command line runner for the <c>docfx build</c> command.
     /// </summary>
     internal sealed class DocFxBuildRunner : DocFxTool<DocFxBuildSettings>
     {

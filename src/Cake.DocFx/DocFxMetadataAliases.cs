@@ -8,14 +8,16 @@ using Cake.DocFx.Metadata;
 namespace Cake.DocFx
 {
     /// <summary>
-    /// Contains functionality related to <see href="http://dotnet.github.io/docfx">DocFx</see>.
+    /// Contains functionality related to extracting API metadata using
+    /// <see href="http://dotnet.github.io/docfx">DocFx</see>.
     /// </summary>
     [CakeAliasCategory("DocFx")]
     [CakeNamespaceImport("Cake.DocFx.Metadata")]
     public static class DocFxMetadataAliases
     {
         /// <summary>
-        /// Extract API documentation using DocFx.
+        /// Extract API documentation using DocFx for the <c>docfx.json</c> file 
+        /// in the current working directory.
         /// </summary>
         /// <param name="context">The Cake context.</param>
         /// <example>
@@ -29,7 +31,7 @@ namespace Cake.DocFx
             => context.DocFxMetadata((DocFxMetadataSettings) null);
 
         /// <summary>
-        /// Extract API documentation using DocFx.
+        /// Extract API documentation using DocFx for a specific <c>docfx.json</c> file.
         /// </summary>
         /// <param name="context">The Cake context.</param>
         /// <param name="configFile">The path to the docfx.json config file.</param>

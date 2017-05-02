@@ -6,14 +6,15 @@ using Cake.DocFx.Init;
 namespace Cake.DocFx
 {
     /// <summary>
-    /// Contains functionality related to <see href="http://dotnet.github.io/docfx">DocFx</see>.
+    /// Contains functionality related to creating new <see href="http://dotnet.github.io/docfx">DocFx</see>
+    /// projects.
     /// </summary>
     [CakeAliasCategory("DocFx")]
     [CakeNamespaceImport("Cake.DocFx.Build")]
     public static class DocFxInitAliases
     {
         /// <summary>
-        /// Generate an initial <code>docfx.json</code> file.
+        /// Generate an initial <c>docfx.json</c> file.
         /// </summary>
         /// <param name="context">The Cake context.</param>
         /// <example>
@@ -27,10 +28,11 @@ namespace Cake.DocFx
             => context.DocFxInit((DocFxInitSettings)null);
 
         /// <summary>
-        /// Generate an initial <code>docfx.json</code> file, with the specified settings.
+        /// Generate an initial <c>docfx.json</c> file, with the specified settings.
         /// </summary>
         /// <param name="context">The Cake context.</param>
-        /// <param name="settings">The DocFx settings.</param>
+        /// <param name="settings">The optional DocFx settings. 
+        /// If no settings are passed default settings are used.</param>
         /// <example>
         /// <code>
         /// DocFxInit(new DocFxInitSettings()
