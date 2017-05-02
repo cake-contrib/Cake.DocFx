@@ -131,9 +131,10 @@
 		<li role="separator" class="divider"></li>
 			<li class="header">Class Types</li>
 				<li class="selected"><a href="/Cake.DocFx/api/Cake.DocFx/DocFxAliases">DocFxAliases</a></li>
-				<li><a href="/Cake.DocFx/api/Cake.DocFx/DocFxBuildSettings">DocFxBuildSettings</a></li>
-				<li><a href="/Cake.DocFx/api/Cake.DocFx/DocFxInitSettings">DocFxInitSettings</a></li>
-				<li><a href="/Cake.DocFx/api/Cake.DocFx/DocFxMetadataSettings">Doc<wbr>Fx<wbr>Metadata<wbr>Settings</a></li>
+				<li><a href="/Cake.DocFx/api/Cake.DocFx/DocFxBuildAliases">DocFxBuildAliases</a></li>
+				<li><a href="/Cake.DocFx/api/Cake.DocFx/DocFxGlobalMetadata">DocFxGlobalMetadata</a></li>
+				<li><a href="/Cake.DocFx/api/Cake.DocFx/DocFxInitAliases">DocFxInitAliases</a></li>
+				<li><a href="/Cake.DocFx/api/Cake.DocFx/DocFxMetadataAliases">DocFxMetadataAliases</a></li>
 				<li><a href="/Cake.DocFx/api/Cake.DocFx/DocFxSettings">DocFxSettings</a></li>
 
 
@@ -237,7 +238,7 @@ public static class DocFxAliases</code></pre>
 								<td>void</td>
 								<td>
 									<div>
-    Builds DocFx API metadata and markdown files.
+    Obsolete. Use <code class="cs">Cake.DocFx.DocFxBuildAliases.DocFxBuild(ICakeContext)</code> instead.
     </div>
 											<div><small><em>static</em></small></div>
 								</td>
@@ -247,7 +248,7 @@ public static class DocFxAliases</code></pre>
 								<td>void</td>
 								<td>
 									<div>
-    Builds markdown and API documentation using DocFx, with the specified settings.
+    Obsolete. Use <code class="cs">Cake.DocFx.DocFxBuildAliases.DocFxBuild(ICakeContext,Cake.DocFx.Build.DocFxBuildSettings)</code> instead.
     </div>
 											<div><small><em>static</em></small></div>
 								</td>
@@ -257,7 +258,7 @@ public static class DocFxAliases</code></pre>
 								<td>void</td>
 								<td>
 									<div>
-    Builds markdown and API documentation using DocFx.
+    Obsolete. Use <code class="cs">Cake.DocFx.DocFxBuildAliases.DocFxBuild(ICakeContext,FilePath)</code> instead.
     </div>
 											<div><small><em>static</em></small></div>
 								</td>
@@ -267,107 +268,7 @@ public static class DocFxAliases</code></pre>
 								<td>void</td>
 								<td>
 									<div>
-    Builds markdown and API documentation using DocFx, with the specified settings.
-    </div>
-											<div><small><em>static</em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/Cake.DocFx/api/Cake.DocFx/DocFxAliases/E7B6B8A0">DocFxBuild<wbr>(ICakeContext)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-    Builds markdown only using DocFx. This will not build API documentation.
-    </div>
-											<div><small><em>static</em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/Cake.DocFx/api/Cake.DocFx/DocFxAliases/360D6531">DocFxBuild<wbr>(ICakeContext, <wbr>DocFxBuildSettings)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-    Builds markdown only using DocFx, with the specified settings. This will not build API documentation.
-    </div>
-											<div><small><em>static</em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/Cake.DocFx/api/Cake.DocFx/DocFxAliases/46638C35">DocFxBuild<wbr>(ICakeContext, <wbr>FilePath)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-    Builds markdown only using DocFx. This will not build API documentation.
-    </div>
-											<div><small><em>static</em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/Cake.DocFx/api/Cake.DocFx/DocFxAliases/1F029410">DocFxBuild<wbr>(ICakeContext, <wbr>FilePath, <wbr>DocFxBuildSettings)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-    Builds markdown only using DocFx, with the specified settings. This will not build API documentation.
-    </div>
-											<div><small><em>static</em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/Cake.DocFx/api/Cake.DocFx/DocFxAliases/26B4EBA9">DocFxInit<wbr>(ICakeContext)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-    Generate an initial <pre><code class="cs">docfx.json</code></pre> file.
-    </div>
-											<div><small><em>static</em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/Cake.DocFx/api/Cake.DocFx/DocFxAliases/020726CB">DocFxInit<wbr>(ICakeContext, <wbr>DocFxInitSettings)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-    Generate an initial <pre><code class="cs">docfx.json</code></pre> file, with the specified settings.
-    </div>
-											<div><small><em>static</em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/Cake.DocFx/api/Cake.DocFx/DocFxAliases/69ED53D4">DocFxMetadata<wbr>(ICakeContext)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-    Extract API documentation using DocFx.
-    </div>
-											<div><small><em>static</em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/Cake.DocFx/api/Cake.DocFx/DocFxAliases/0C17A214">DocFxMetadata<wbr>(ICakeContext, <wbr>Doc<wbr>Fx<wbr>Metadata<wbr>Settings)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-    Extract API documentation using DocFx, with the specified settings.
-    </div>
-											<div><small><em>static</em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/Cake.DocFx/api/Cake.DocFx/DocFxAliases/31EA4302">DocFxMetadata<wbr>(ICakeContext, <wbr>FilePath)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-    Extract API documentation using DocFx.
-    </div>
-											<div><small><em>static</em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/Cake.DocFx/api/Cake.DocFx/DocFxAliases/F8AC733A">DocFxMetadata<wbr>(ICakeContext, <wbr>IEnumerable<wbr>&lt;FilePath&gt;<wbr>)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-    Extract API documentation using DocFx, with the specified project/source files or search patterns.
+    Obsolete. Use <code class="cs">Cake.DocFx.DocFxBuildAliases.DocFxBuild(ICakeContext,FilePath,Cake.DocFx.Build.DocFxBuildSettings)</code> instead.
     </div>
 											<div><small><em>static</em></small></div>
 								</td>

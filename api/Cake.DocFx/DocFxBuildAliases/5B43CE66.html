@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/Cake.DocFx/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/Cake.DocFx/assets/img/favicon.ico" type="image/x-icon">
-        <title>Docs - API - DocFxAliases.DocFx(ICakeContext, FilePath) Method</title>
+        <title>Docs - API - DocFxBuildAliases.DocFxBuild(ICakeContext, FilePath, DocFxBuildSettings) Method</title>
         <link href="/Cake.DocFx/assets/css/mermaid.css" rel="stylesheet">
         <link href="/Cake.DocFx/assets/css/highlight.css" rel="stylesheet">
         <link href="/Cake.DocFx/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
@@ -74,6 +74,7 @@
                     	
 	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
 <p><a href="#Syntax">Syntax</a></p>
+<p><a href="#Examples">Examples</a></p>
 <p><a href="#Attributes">Attributes</a></p>
 <p><a href="#Parameters">Parameters</a></p>
 <p><a href="#ReturnValue">Return Value</a></p>
@@ -130,13 +131,13 @@
 			<li class="header">Namespace</li>
 		<li><a href="/Cake.DocFx/api/Cake.DocFx">Cake<wbr>.DocFx</a></li>
 		<li class="header">Type</li>
-		<li><a href="/Cake.DocFx/api/Cake.DocFx/DocFxAliases">DocFxAliases</a></li>
+		<li><a href="/Cake.DocFx/api/Cake.DocFx/DocFxBuildAliases">DocFxBuildAliases</a></li>
 		<li role="separator" class="divider"></li>
 			<li class="header">Method Members</li>
-				<li><a href="/Cake.DocFx/api/Cake.DocFx/DocFxAliases/2C7371BA">DocFx<wbr>(ICakeContext)<wbr></a></li>
-				<li class="selected"><a href="/Cake.DocFx/api/Cake.DocFx/DocFxAliases/254C90C6">DocFx<wbr>(ICakeContext, <wbr>FilePath)<wbr></a></li>
-				<li><a href="/Cake.DocFx/api/Cake.DocFx/DocFxAliases/28FFBAB4">DocFx<wbr>(ICakeContext, <wbr>DocFxSettings)<wbr></a></li>
-				<li><a href="/Cake.DocFx/api/Cake.DocFx/DocFxAliases/46F59EC6">DocFx<wbr>(ICakeContext, <wbr>FilePath, <wbr>DocFxSettings)<wbr></a></li>
+				<li><a href="/Cake.DocFx/api/Cake.DocFx/DocFxBuildAliases/1290FBC8">DocFxBuild<wbr>(ICakeContext)<wbr></a></li>
+				<li><a href="/Cake.DocFx/api/Cake.DocFx/DocFxBuildAliases/916CB047">DocFxBuild<wbr>(ICakeContext, <wbr>FilePath)<wbr></a></li>
+				<li><a href="/Cake.DocFx/api/Cake.DocFx/DocFxBuildAliases/3F590191">DocFxBuild<wbr>(ICakeContext, <wbr>DocFxBuildSettings)<wbr></a></li>
+				<li class="selected"><a href="/Cake.DocFx/api/Cake.DocFx/DocFxBuildAliases/5B43CE66">DocFxBuild<wbr>(ICakeContext, <wbr>FilePath, <wbr>DocFxBuildSettings)<wbr></a></li>
 
 
                     </ul>
@@ -150,15 +151,16 @@
 
 
 <section class="content-header">
-			<h3><a href="/Cake.DocFx/api/Cake.DocFx/DocFxAliases">DocFxAliases</a>.</h3>
-	<h1>DocFx<wbr>(ICakeContext, <wbr>FilePath)<wbr> <small>Method</small></h1>
+			<h3><a href="/Cake.DocFx/api/Cake.DocFx/DocFxBuildAliases">DocFxBuildAliases</a>.</h3>
+	<h1>DocFxBuild<wbr>(ICakeContext, <wbr>FilePath, <wbr>DocFxBuildSettings)<wbr> <small>Method</small></h1>
 </section>
 <section class="content">
 	
 	
 		<h1 id="Summary">Summary</h1>
 	<div class="lead">
-    Obsolete. Use <code class="cs">Cake.DocFx.DocFxBuildAliases.DocFxBuild(ICakeContext,FilePath)</code> instead.
+    Generate client-only website combining API in YAML files and conceptual files
+    for a specific <code class="cs">docfx.json</code> file using the specified settings.
     </div>
 
 		<div class="panel panel-default">
@@ -169,7 +171,7 @@
 						<dd><a href="/Cake.DocFx/api/Cake.DocFx">Cake<wbr>.DocFx</a></dd>
 					
 						<dt>Containing Type</dt>
-						<dd><a href="/Cake.DocFx/api/Cake.DocFx/DocFxAliases">DocFxAliases</a></dd>		
+						<dd><a href="/Cake.DocFx/api/Cake.DocFx/DocFxBuildAliases">DocFxBuildAliases</a></dd>		
 					
 				</dl>
   			</div>
@@ -178,9 +180,16 @@
 	<h1 id="Syntax">Syntax</h1>
 	<pre><code>[CakeMethodAlias]
 [CakeAliasCategory("Build")]
-[Obsolete("Use DocFxBuild instead.")]
-public static void DocFx(this ICakeContext context, FilePath configFile)</code></pre>
+public static void DocFxBuild(this ICakeContext context, FilePath configFile, DocFxBuildSettings settings)</code></pre>
 
+	<h1 id="Examples">Examples</h1>
+	<div>
+    <pre><code class="cs">DocFxBuild("./docs/docfx.json", new DocFxBuildSettings()
+{
+    OutputPath = "./artifacts/docs",
+    TemplateFolder = "default"
+});</code></pre>
+    </div>
 
 
 	<h1 id="Attributes">Attributes</h1>
@@ -199,10 +208,6 @@ public static void DocFx(this ICakeContext context, FilePath configFile)</code><
 					</tr>
 					<tr>
 						<td>CakeAliasCategory</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>ObsoleteAttribute</td>
 						<td></td>
 					</tr>
 			</tbody></table>
@@ -229,7 +234,14 @@ public static void DocFx(this ICakeContext context, FilePath configFile)</code><
 					<tr>
 						<td>configFile</td>
 						<td>FilePath</td>
-						<td>The path to the docfx.json config file.</td>
+						<td>The optional path to a DocFx config file.
+    If no value is passed the docfx.json file in the current working directory will be used.</td>
+					</tr>
+					<tr>
+						<td>settings</td>
+						<td><a href="/Cake.DocFx/api/Cake.DocFx.Build/DocFxBuildSettings">DocFxBuildSettings</a></td>
+						<td>The optional DocFx settings. 
+    If no settings are passed default settings are used.</td>
 					</tr>
 			</tbody></table>
 		</div>

@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/Cake.DocFx/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/Cake.DocFx/assets/img/favicon.ico" type="image/x-icon">
-        <title>Docs - API - DocFxAliases.DocFx(ICakeContext, FilePath) Method</title>
+        <title>Docs - API - DocFxGlobalMetadata Class</title>
         <link href="/Cake.DocFx/assets/css/mermaid.css" rel="stylesheet">
         <link href="/Cake.DocFx/assets/css/highlight.css" rel="stylesheet">
         <link href="/Cake.DocFx/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
@@ -74,9 +74,7 @@
                     	
 	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
 <p><a href="#Syntax">Syntax</a></p>
-<p><a href="#Attributes">Attributes</a></p>
-<p><a href="#Parameters">Parameters</a></p>
-<p><a href="#ReturnValue">Return Value</a></p>
+<p><a href="#fields">Fields</a></p>
 <hr class="infobar-hidden">
 </div>
 
@@ -129,14 +127,14 @@
                         
 			<li class="header">Namespace</li>
 		<li><a href="/Cake.DocFx/api/Cake.DocFx">Cake<wbr>.DocFx</a></li>
-		<li class="header">Type</li>
-		<li><a href="/Cake.DocFx/api/Cake.DocFx/DocFxAliases">DocFxAliases</a></li>
 		<li role="separator" class="divider"></li>
-			<li class="header">Method Members</li>
-				<li><a href="/Cake.DocFx/api/Cake.DocFx/DocFxAliases/2C7371BA">DocFx<wbr>(ICakeContext)<wbr></a></li>
-				<li class="selected"><a href="/Cake.DocFx/api/Cake.DocFx/DocFxAliases/254C90C6">DocFx<wbr>(ICakeContext, <wbr>FilePath)<wbr></a></li>
-				<li><a href="/Cake.DocFx/api/Cake.DocFx/DocFxAliases/28FFBAB4">DocFx<wbr>(ICakeContext, <wbr>DocFxSettings)<wbr></a></li>
-				<li><a href="/Cake.DocFx/api/Cake.DocFx/DocFxAliases/46F59EC6">DocFx<wbr>(ICakeContext, <wbr>FilePath, <wbr>DocFxSettings)<wbr></a></li>
+			<li class="header">Class Types</li>
+				<li><a href="/Cake.DocFx/api/Cake.DocFx/DocFxAliases">DocFxAliases</a></li>
+				<li><a href="/Cake.DocFx/api/Cake.DocFx/DocFxBuildAliases">DocFxBuildAliases</a></li>
+				<li class="selected"><a href="/Cake.DocFx/api/Cake.DocFx/DocFxGlobalMetadata">DocFxGlobalMetadata</a></li>
+				<li><a href="/Cake.DocFx/api/Cake.DocFx/DocFxInitAliases">DocFxInitAliases</a></li>
+				<li><a href="/Cake.DocFx/api/Cake.DocFx/DocFxMetadataAliases">DocFxMetadataAliases</a></li>
+				<li><a href="/Cake.DocFx/api/Cake.DocFx/DocFxSettings">DocFxSettings</a></li>
 
 
                     </ul>
@@ -150,108 +148,219 @@
 
 
 <section class="content-header">
-			<h3><a href="/Cake.DocFx/api/Cake.DocFx/DocFxAliases">DocFxAliases</a>.</h3>
-	<h1>DocFx<wbr>(ICakeContext, <wbr>FilePath)<wbr> <small>Method</small></h1>
+	<h1>DocFxGlobalMetadata <small>Class</small></h1>
 </section>
 <section class="content">
 	
 	
 		<h1 id="Summary">Summary</h1>
 	<div class="lead">
-    Obsolete. Use <code class="cs">Cake.DocFx.DocFxBuildAliases.DocFxBuild(ICakeContext,FilePath)</code> instead.
+    Constants for metadata keys.
     </div>
 
 		<div class="panel panel-default">
-  			<div class="panel-body">	
-				<dl class="dl-horizontal">	
-						
-						<dt>Namespace</dt>
-						<dd><a href="/Cake.DocFx/api/Cake.DocFx">Cake<wbr>.DocFx</a></dd>
-					
-						<dt>Containing Type</dt>
-						<dd><a href="/Cake.DocFx/api/Cake.DocFx/DocFxAliases">DocFxAliases</a></dd>		
-					
-				</dl>
+  			<div class="panel-body">
+				<div class="row">
+					<div class="col-md-6">
+						<dl class="dl-horizontal">		
+
+								<dt>Namespace</dt>
+								<dd><a href="/Cake.DocFx/api/Cake.DocFx">Cake<wbr>.DocFx</a></dd>
+											
+							
+								<dt>Base Types</dt>
+								<dd>
+									<ul class="list-unstyled">										
+											<li>object</li>								
+									</ul>
+								</dd>				
+							
+							
+						</dl>
+					</div>		
+					<div class="col-md-6">
+						<div class="mermaid">
+							graph TD
+	Base0["object"]--&gt;Type
+	Type["DocFxGlobalMetadata"]
+class Type type-node
+
+						</div>
+					</div>
+				</div>
   			</div>
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>[CakeMethodAlias]
-[CakeAliasCategory("Build")]
-[Obsolete("Use DocFxBuild instead.")]
-public static void DocFx(this ICakeContext context, FilePath configFile)</code></pre>
+	<pre><code>public static class DocFxGlobalMetadata</code></pre>
 
 
 
-	<h1 id="Attributes">Attributes</h1>
-	<div class="box">
-		<div class="box-body no-padding table-responsive">
-			<table class="table table-striped table-hover two-cols">
-				<thead>
-					<tr>
-						<th>Type</th>
-						<th>Description</th>
-					</tr>
-				</thead>
-					<tbody><tr>
-						<td>CakeMethodAlias</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>CakeAliasCategory</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>ObsoleteAttribute</td>
-						<td></td>
-					</tr>
-			</tbody></table>
-		</div>
-	</div>	
 
 
-	<h1 id="Parameters">Parameters</h1>
-	<div class="box">
-		<div class="box-body no-padding table-responsive">
-			<table class="table table-striped table-hover three-cols">
-				<thead>
-					<tr>
-						<th>Name</th>
-						<th>Type</th>
-						<th>Description</th>
-					</tr>
-				</thead>
-					<tbody><tr>
-						<td>context</td>
-						<td>ICakeContext</td>
-						<td>The Cake context.</td>
-					</tr>
-					<tr>
-						<td>configFile</td>
-						<td>FilePath</td>
-						<td>The path to the docfx.json config file.</td>
-					</tr>
-			</tbody></table>
-		</div>
-	</div>	
 
-	<h1 id="ReturnValue">Return Value</h1>
-	<div class="box">
-		<div class="box-body no-padding table-responsive">
-			<table class="table table-striped table-hover two-cols">
-				<thead>
-					<tr>
-						<th>Type</th>
-						<th>Description</th>
-					</tr>
-				</thead>
-				<tbody><tr>
-					<td>void</td>
-					<td></td>
-				</tr>
-			</tbody></table>
-		</div>
-	</div>	
+
+
+			<h1 id="fields">Fields</h1>
+			<div class="box">
+				<div class="box-body no-padding table-responsive">
+					<table class="table table-striped table-hover three-cols">
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>Constant Value</th>
+								<th>Summary</th>
+							</tr>
+						</thead>
+							<tbody><tr>
+								<td><a href="/Cake.DocFx/api/Cake.DocFx/DocFxGlobalMetadata/E57AE685">AppFaviconPath</a></td>
+								<td>_appFaviconPath</td>
+								<td>
+									<div>
+    Metadata key for setting the favicon file's path from output root.
+    If not specified DocFX's favicon will be shown.
+    Remember to add file to resource.
+    </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/Cake.DocFx/api/Cake.DocFx/DocFxGlobalMetadata/B15167EF">AppFooter</a></td>
+								<td>_appFooter</td>
+								<td>
+									<div>
+    Metadata key for setting the footer text.
+    If not specified DocFX's Copyright will be shown.
+    </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/Cake.DocFx/api/Cake.DocFx/DocFxGlobalMetadata/177B671B">AppLogoPath</a></td>
+								<td>_appLogoPath</td>
+								<td>
+									<div>
+    Metadata key for setting the logo file's path from output root.
+    If not specified DocFX's logo will be shown.
+    Remember to also add file to resource.
+    </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/Cake.DocFx/api/Cake.DocFx/DocFxGlobalMetadata/E1A40810">AppTitle</a></td>
+								<td>_appTitle</td>
+								<td>
+									<div>
+    Metadata key for setting the title.
+    The value will be appended to each output page's head title.
+    </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/Cake.DocFx/api/Cake.DocFx/DocFxGlobalMetadata/0F05F224">DisableAffix</a></td>
+								<td>_disableAffix</td>
+								<td>
+									<div>
+    Metadata key for disabling the affix bar on the right of each page.
+    </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/Cake.DocFx/api/Cake.DocFx/DocFxGlobalMetadata/532F1AD9">DisableBreadcrumb</a></td>
+								<td>_disableBreadcrumb</td>
+								<td>
+									<div>
+    Metadata key for disabling the breadcrumb on the top of each page.
+    </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/Cake.DocFx/api/Cake.DocFx/DocFxGlobalMetadata/FB68B7EF">DisableContribution</a></td>
+								<td>_disableContribution</td>
+								<td>
+									<div>
+    Metadata key for disabling the "View Source" and "Improve this Doc" buttons.
+    </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/Cake.DocFx/api/Cake.DocFx/DocFxGlobalMetadata/AA6FA878">DisableNavbar</a></td>
+								<td>_disableNavbar</td>
+								<td>
+									<div>
+    Metadata key for disabling the navigation bar on the top of each page.
+    </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/Cake.DocFx/api/Cake.DocFx/DocFxGlobalMetadata/F4BEB111">DisableToc</a></td>
+								<td>_disableToc</td>
+								<td>
+									<div>
+    Metadata key for disabling table of contents on the left of each page.
+    </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/Cake.DocFx/api/Cake.DocFx/DocFxGlobalMetadata/556873AF">EnableNewTab</a></td>
+								<td>_enableNewTab</td>
+								<td>
+									<div>
+    Metadata key for setting indicating whether to open a new tab when clicking an external link.
+    Internal links always shows within the current tab.
+    </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/Cake.DocFx/api/Cake.DocFx/DocFxGlobalMetadata/9DC06A8B">EnableSearch</a></td>
+								<td>_enableSearch</td>
+								<td>
+									<div>
+    Metadata key for showing the search box on the top of each page.
+    </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/Cake.DocFx/api/Cake.DocFx/DocFxGlobalMetadata/A3288EE4">GitContribute</a></td>
+								<td>_gitContribute</td>
+								<td>
+									<div>
+    Metadata key for customizing the "Improve this Doc" URL button for public contributors.
+    Use repo to specify the contribution repository URL.
+    Use branch to specify the contribution branch.
+    Use path to specify the folder for new overwrite files.
+    If not set, the Git URL and branch of the current Git repository will be used.
+    </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/Cake.DocFx/api/Cake.DocFx/DocFxGlobalMetadata/E390885F">GitUrlPattern</a></td>
+								<td>_gitUrlPattern</td>
+								<td>
+									<div>
+    Metadata key for choosing the URL pattern of the generated link for "View Source" and "Improve this Doc".
+    Supports <code class="cs">github</code> and <code class="cs">vso</code> currently.
+    If not set, DocFX will try speculating the pattern from domain name of the Git URL.
+    </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+					</tbody></table>
+				</div>
+			</div>
+		
+
+
 
 
 	

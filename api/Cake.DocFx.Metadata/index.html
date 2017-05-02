@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/Cake.DocFx/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/Cake.DocFx/assets/img/favicon.ico" type="image/x-icon">
-        <title>Docs - API - DocFxAliases.DocFx(ICakeContext, FilePath) Method</title>
+        <title>Docs - API - Cake.DocFx.Metadata Namespace</title>
         <link href="/Cake.DocFx/assets/css/mermaid.css" rel="stylesheet">
         <link href="/Cake.DocFx/assets/css/highlight.css" rel="stylesheet">
         <link href="/Cake.DocFx/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
@@ -72,11 +72,7 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
-<p><a href="#Syntax">Syntax</a></p>
-<p><a href="#Attributes">Attributes</a></p>
-<p><a href="#Parameters">Parameters</a></p>
-<p><a href="#ReturnValue">Return Value</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#ClassTypes">Class Types</a></p>
 <hr class="infobar-hidden">
 </div>
 
@@ -127,17 +123,21 @@
 
                     <ul class="sidebar-menu">
                         
-			<li class="header">Namespace</li>
-		<li><a href="/Cake.DocFx/api/Cake.DocFx">Cake<wbr>.DocFx</a></li>
-		<li class="header">Type</li>
-		<li><a href="/Cake.DocFx/api/Cake.DocFx/DocFxAliases">DocFxAliases</a></li>
-		<li role="separator" class="divider"></li>
-			<li class="header">Method Members</li>
-				<li><a href="/Cake.DocFx/api/Cake.DocFx/DocFxAliases/2C7371BA">DocFx<wbr>(ICakeContext)<wbr></a></li>
-				<li class="selected"><a href="/Cake.DocFx/api/Cake.DocFx/DocFxAliases/254C90C6">DocFx<wbr>(ICakeContext, <wbr>FilePath)<wbr></a></li>
-				<li><a href="/Cake.DocFx/api/Cake.DocFx/DocFxAliases/28FFBAB4">DocFx<wbr>(ICakeContext, <wbr>DocFxSettings)<wbr></a></li>
-				<li><a href="/Cake.DocFx/api/Cake.DocFx/DocFxAliases/46F59EC6">DocFx<wbr>(ICakeContext, <wbr>FilePath, <wbr>DocFxSettings)<wbr></a></li>
+	<li class="header">Namespaces</li>   
 
+				<li class="treeview active">
+				<a href="/Cake.DocFx/api/Cake">Cake</a> <a href="#" class="expand"></a>
+				<ul class="treeview-menu">
+			
+				<li class="treeview active">
+				<a href="/Cake.DocFx/api/Cake.DocFx">Cake<wbr>.DocFx</a> <a href="#" class="expand"></a>
+				<ul class="treeview-menu">
+						<li><a href="/Cake.DocFx/api/Cake.DocFx.Build">Cake<wbr>.DocFx<wbr>.Build</a></li>
+			<li><a href="/Cake.DocFx/api/Cake.DocFx.Helper">Cake<wbr>.DocFx<wbr>.Helper</a></li>
+			<li><a href="/Cake.DocFx/api/Cake.DocFx.Init">Cake<wbr>.DocFx<wbr>.Init</a></li>
+			<li class=" selected"><a href="/Cake.DocFx/api/Cake.DocFx.Metadata">Cake<wbr>.DocFx<wbr>.Metadata</a></li>
+</ul></li></ul></li>			<li><a href="/Cake.DocFx/api/global">global</a></li>
+      
 
                     </ul>
                 </section>                
@@ -150,110 +150,33 @@
 
 
 <section class="content-header">
-			<h3><a href="/Cake.DocFx/api/Cake.DocFx/DocFxAliases">DocFxAliases</a>.</h3>
-	<h1>DocFx<wbr>(ICakeContext, <wbr>FilePath)<wbr> <small>Method</small></h1>
+	<h1>Cake<wbr>.DocFx<wbr>.Metadata <small>Namespace</small></h1>
 </section>
 <section class="content">
 	
 	
-		<h1 id="Summary">Summary</h1>
-	<div class="lead">
-    Obsolete. Use <code class="cs">Cake.DocFx.DocFxBuildAliases.DocFxBuild(ICakeContext,FilePath)</code> instead.
-    </div>
+	
 
-		<div class="panel panel-default">
-  			<div class="panel-body">	
-				<dl class="dl-horizontal">	
-						
-						<dt>Namespace</dt>
-						<dd><a href="/Cake.DocFx/api/Cake.DocFx">Cake<wbr>.DocFx</a></dd>
-					
-						<dt>Containing Type</dt>
-						<dd><a href="/Cake.DocFx/api/Cake.DocFx/DocFxAliases">DocFxAliases</a></dd>		
-					
-				</dl>
-  			</div>
-		</div>
-
-	<h1 id="Syntax">Syntax</h1>
-	<pre><code>[CakeMethodAlias]
-[CakeAliasCategory("Build")]
-[Obsolete("Use DocFxBuild instead.")]
-public static void DocFx(this ICakeContext context, FilePath configFile)</code></pre>
-
-
-
-	<h1 id="Attributes">Attributes</h1>
-	<div class="box">
-		<div class="box-body no-padding table-responsive">
-			<table class="table table-striped table-hover two-cols">
-				<thead>
-					<tr>
-						<th>Type</th>
-						<th>Description</th>
-					</tr>
-				</thead>
-					<tbody><tr>
-						<td>CakeMethodAlias</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>CakeAliasCategory</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>ObsoleteAttribute</td>
-						<td></td>
-					</tr>
-			</tbody></table>
-		</div>
-	</div>	
-
-
-	<h1 id="Parameters">Parameters</h1>
-	<div class="box">
-		<div class="box-body no-padding table-responsive">
-			<table class="table table-striped table-hover three-cols">
-				<thead>
-					<tr>
-						<th>Name</th>
-						<th>Type</th>
-						<th>Description</th>
-					</tr>
-				</thead>
-					<tbody><tr>
-						<td>context</td>
-						<td>ICakeContext</td>
-						<td>The Cake context.</td>
-					</tr>
-					<tr>
-						<td>configFile</td>
-						<td>FilePath</td>
-						<td>The path to the docfx.json config file.</td>
-					</tr>
-			</tbody></table>
-		</div>
-	</div>	
-
-	<h1 id="ReturnValue">Return Value</h1>
-	<div class="box">
-		<div class="box-body no-padding table-responsive">
-			<table class="table table-striped table-hover two-cols">
-				<thead>
-					<tr>
-						<th>Type</th>
-						<th>Description</th>
-					</tr>
-				</thead>
-				<tbody><tr>
-					<td>void</td>
-					<td></td>
-				</tr>
-			</tbody></table>
-		</div>
-	</div>	
-
-
+			<h1 id="ClassTypes">Class Types</h1>
+			<div class="box">
+				<div class="box-body no-padding table-responsive">
+					<table class="table table-striped table-hover two-cols">
+						<thead>
+							<tr>
+								<th>Class</th>
+									<th>Summary</th>
+							</tr>
+						</thead>
+							<tbody><tr>
+								<td><a href="/Cake.DocFx/api/Cake.DocFx.Metadata/DocFxMetadataSettings">Doc<wbr>Fx<wbr>Metadata<wbr>Settings</a></td>
+									<td>
+    Contains settings used by <code class="cs"><a href="/Cake.DocFx">DocFxMetadataRunner</a></code>.
+    </td>
+							</tr>
+					</tbody></table>
+				</div>
+			</div>
+		
 	
 </section>
                 

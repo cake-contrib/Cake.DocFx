@@ -74,7 +74,6 @@
                     	
 	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
 <p><a href="#Syntax">Syntax</a></p>
-<p><a href="#Examples">Examples</a></p>
 <p><a href="#Attributes">Attributes</a></p>
 <p><a href="#Parameters">Parameters</a></p>
 <p><a href="#ReturnValue">Return Value</a></p>
@@ -138,16 +137,6 @@
 				<li><a href="/Cake.DocFx/api/Cake.DocFx/DocFxAliases/254C90C6">DocFx<wbr>(ICakeContext, <wbr>FilePath)<wbr></a></li>
 				<li><a href="/Cake.DocFx/api/Cake.DocFx/DocFxAliases/28FFBAB4">DocFx<wbr>(ICakeContext, <wbr>DocFxSettings)<wbr></a></li>
 				<li><a href="/Cake.DocFx/api/Cake.DocFx/DocFxAliases/46F59EC6">DocFx<wbr>(ICakeContext, <wbr>FilePath, <wbr>DocFxSettings)<wbr></a></li>
-				<li><a href="/Cake.DocFx/api/Cake.DocFx/DocFxAliases/E7B6B8A0">DocFxBuild<wbr>(ICakeContext)<wbr></a></li>
-				<li><a href="/Cake.DocFx/api/Cake.DocFx/DocFxAliases/46638C35">DocFxBuild<wbr>(ICakeContext, <wbr>FilePath)<wbr></a></li>
-				<li><a href="/Cake.DocFx/api/Cake.DocFx/DocFxAliases/360D6531">DocFxBuild<wbr>(ICakeContext, <wbr>DocFxBuildSettings)<wbr></a></li>
-				<li><a href="/Cake.DocFx/api/Cake.DocFx/DocFxAliases/1F029410">DocFxBuild<wbr>(ICakeContext, <wbr>FilePath, <wbr>DocFxBuildSettings)<wbr></a></li>
-				<li><a href="/Cake.DocFx/api/Cake.DocFx/DocFxAliases/26B4EBA9">DocFxInit<wbr>(ICakeContext)<wbr></a></li>
-				<li><a href="/Cake.DocFx/api/Cake.DocFx/DocFxAliases/020726CB">DocFxInit<wbr>(ICakeContext, <wbr>DocFxInitSettings)<wbr></a></li>
-				<li><a href="/Cake.DocFx/api/Cake.DocFx/DocFxAliases/69ED53D4">DocFxMetadata<wbr>(ICakeContext)<wbr></a></li>
-				<li><a href="/Cake.DocFx/api/Cake.DocFx/DocFxAliases/31EA4302">DocFxMetadata<wbr>(ICakeContext, <wbr>FilePath)<wbr></a></li>
-				<li><a href="/Cake.DocFx/api/Cake.DocFx/DocFxAliases/F8AC733A">DocFxMetadata<wbr>(ICakeContext, <wbr>IEnumerable<wbr>&lt;FilePath&gt;<wbr>)<wbr></a></li>
-				<li><a href="/Cake.DocFx/api/Cake.DocFx/DocFxAliases/0C17A214">DocFxMetadata<wbr>(ICakeContext, <wbr>Doc<wbr>Fx<wbr>Metadata<wbr>Settings)<wbr></a></li>
 
 
                     </ul>
@@ -169,7 +158,7 @@
 	
 		<h1 id="Summary">Summary</h1>
 	<div class="lead">
-    Builds DocFx API metadata and markdown files.
+    Obsolete. Use <code class="cs">Cake.DocFx.DocFxBuildAliases.DocFxBuild(ICakeContext)</code> instead.
     </div>
 
 		<div class="panel panel-default">
@@ -189,12 +178,9 @@
 	<h1 id="Syntax">Syntax</h1>
 	<pre><code>[CakeMethodAlias]
 [CakeAliasCategory("Build")]
+[Obsolete("Use DocFxBuild instead.")]
 public static void DocFx(this ICakeContext context)</code></pre>
 
-	<h1 id="Examples">Examples</h1>
-	<div>
-    <pre><code class="cs">DocFx();</code></pre>
-    </div>
 
 
 	<h1 id="Attributes">Attributes</h1>
@@ -213,6 +199,10 @@ public static void DocFx(this ICakeContext context)</code></pre>
 					</tr>
 					<tr>
 						<td>CakeAliasCategory</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>ObsoleteAttribute</td>
 						<td></td>
 					</tr>
 			</tbody></table>

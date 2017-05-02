@@ -106,21 +106,21 @@
 	</section>
 	<section class="content">
 		<h1 id="build-script">Build Script</h1>
-<p>To use docfx in your cake file simply import it and the docfx tool. Then define a doc task.</p>
+<p>To use DocFX in your Cake file simply import it and the DocFX tool. Then define a doc task.</p>
 <pre><code class="language-cake">#addin "Cake.DocFx"
 #tool "docfx.console"
 
-Task("doc").Does(() =&gt; DocFx());
+Task("doc").Does(() =&gt; DocFxBuild());
 </code></pre>
-<div class="alert alert-info"><p><strong>IMPORTANT</strong> Do not forget to load '#tool "docfx.console"' at top of your cake file. Otherwise, you can not run the <code>DocFx()</code> command.</p>
+<div class="alert alert-info"><p><strong>IMPORTANT</strong> Do not forget to load '#tool "docfx.console"' at top of your Cake file. Otherwise, you can not run the <code>DocFx()</code> command.</p>
 </div>
 <p>If the <code>docfx.json</code> file is anywhere else then the root directory you can pass in the location as parameter.</p>
 <pre><code class="language-cake">#addin "Cake.DocFx"
 #tool "docfx.console"
 
-Task("doc").Does(() =&gt; DocFx("./docs/docfx.json"));
+Task("doc").Does(() =&gt; DocFxBuild("./docs/docfx.json"));
 </code></pre>
-<div class="alert alert-info"><p><strong>IMPORTANT</strong> The <code>DocFx</code> command requires an existing <code>docfx.json</code> file. To bootstrap docfx use <code>docfx init</code> or <code>./tools/docfx.console/tools/docfx.exe init</code>.</p>
+<div class="alert alert-info"><p><strong>IMPORTANT</strong> The <code>DocFx</code> command requires an existing <code>docfx.json</code> file. To bootstrap DocFX use <code>docfx init</code> or <code>./tools/docfx.console/tools/docfx.exe init</code>.</p>
 </div>
 
 	</section>
