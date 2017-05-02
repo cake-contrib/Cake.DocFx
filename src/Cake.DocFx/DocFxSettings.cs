@@ -1,11 +1,13 @@
-﻿using Cake.Core.IO;
+﻿using System;
+using Cake.Core.IO;
 using Cake.Core.Tooling;
 
 namespace Cake.DocFx
 {
     /// <summary>
-    /// Contains settings used by <see cref="DocFxRunner"/>.
+    /// Obsolete use aliases from <see cref="DocFxBuildAliases"/> instead.
     /// </summary>
+    [Obsolete("Use DocFxBuild instead.")]
     public class DocFxSettings : ToolSettings
     {
         /// <summary>
