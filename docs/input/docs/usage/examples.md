@@ -6,7 +6,7 @@ To use docfx in your cake file simply import it and the docfx tool. Then define 
 #addin "Cake.DocFx"
 #tool "docfx.console"
 
-Task("doc").Does(() => DocFx());
+Task("doc").Does(() => DocFxBuild());
 ```
 
 :::{.alert .alert-info}
@@ -19,7 +19,7 @@ If the `docfx.json` file is anywhere else then the root directory you can pass i
 #addin "Cake.DocFx"
 #tool "docfx.console"
 
-Task("doc").Does(() => DocFx("./docs/docfx.json"));
+Task("doc").Does(() => DocFxBuild("./docs/docfx.json"));
 ```
 
 :::{.alert .alert-info}
