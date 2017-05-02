@@ -1,4 +1,5 @@
 ﻿using Cake.Core.IO;
+using Cake.DocFx.Build;
 
 namespace Cake.DocFx.Tests.Build
 {

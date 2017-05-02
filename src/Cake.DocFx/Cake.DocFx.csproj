@@ -46,24 +46,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DocFxBuildRunner.cs" />
-    <Compile Include="DocFxBuildSettings.cs" />
+    <Compile Include="Build\DocFxBuildRunner.cs" />
+    <Compile Include="Build\DocFxBuildSettings.cs" />
+    <Compile Include="DocFxMetadataAliases.cs" />
+    <Compile Include="DocFxInitAliases.cs" />
+    <Compile Include="DocFxBuildAliases.cs" />
     <Compile Include="DocFxAliases.cs" />
     <Compile Include="DocFxGlobalMetadata.cs" />
-    <Compile Include="DocFxInitRunner.cs" />
-    <Compile Include="DocFxInitSettings.cs" />
+    <Compile Include="Init\DocFxInitRunner.cs" />
+    <Compile Include="Init\DocFxInitSettings.cs" />
     <Compile Include="DocFxRunner.cs" />
     <Compile Include="DocFxSettings.cs" />
     <Compile Include="DocFxTool.cs" />
     <Compile Include="Helper\Contract.cs" />
-    <Compile Include="DocFxMetadataRunner.cs" />
-    <Compile Include="DocFxMetadataSettings.cs" />
+    <Compile Include="Metadata\DocFxMetadataRunner.cs" />
+    <Compile Include="Metadata\DocFxMetadataSettings.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.Static.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

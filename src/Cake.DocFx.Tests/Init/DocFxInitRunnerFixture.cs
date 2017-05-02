@@ -1,4 +1,6 @@
-﻿namespace Cake.DocFx.Tests.Init
+﻿using Cake.DocFx.Init;
+
+namespace Cake.DocFx.Tests.Init
 {
     internal sealed class DocFxInitRunnerFixture : DocFxFixture<DocFxInitSettings>
     {

@@ -2,7 +2,7 @@
 using Cake.Core.IO;
 using Cake.Core.Tooling;
 
-namespace Cake.DocFx
+namespace Cake.DocFx.Build
 {
     /// <summary>
     /// Contains settings used by <see cref="DocFxBuildRunner"/>.

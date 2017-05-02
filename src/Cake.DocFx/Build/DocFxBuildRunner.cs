@@ -4,7 +4,7 @@ using Cake.Core.IO;
 using Cake.Core.Tooling;
 using Cake.DocFx.Helper;
 
-namespace Cake.DocFx
+namespace Cake.DocFx.Build
 {
     /// <summary>
     /// Command line runner for the 'docfx build' command.
