@@ -34,46 +34,6 @@ var searchModule = function() {
 
     a({
         id:0,
-        title:"DocFxInitSettings",
-        content:"DocFxInitSettings",
-        description:'',
-        tags:''
-    });
-
-    a({
-        id:1,
-        title:"DocFxBuildSettings",
-        content:"DocFxBuildSettings",
-        description:'',
-        tags:''
-    });
-
-    a({
-        id:2,
-        title:"DocFxBuildAliases",
-        content:"DocFxBuildAliases",
-        description:'',
-        tags:''
-    });
-
-    a({
-        id:3,
-        title:"DocFxInitAliases",
-        content:"DocFxInitAliases",
-        description:'',
-        tags:''
-    });
-
-    a({
-        id:4,
-        title:"DocFxMetadataSettings",
-        content:"DocFxMetadataSettings",
-        description:'',
-        tags:''
-    });
-
-    a({
-        id:5,
         title:"DocFxSettings",
         content:"DocFxSettings",
         description:'',
@@ -81,15 +41,23 @@ var searchModule = function() {
     });
 
     a({
-        id:6,
-        title:"DocFxAliases",
-        content:"DocFxAliases",
+        id:1,
+        title:"DocFxInitSettings",
+        content:"DocFxInitSettings",
         description:'',
         tags:''
     });
 
     a({
-        id:7,
+        id:2,
+        title:"DocFxBuildSettings",
+        content:"DocFxBuildSettings",
+        description:'',
+        tags:''
+    });
+
+    a({
+        id:3,
         title:"DocFxMetadataAliases",
         content:"DocFxMetadataAliases",
         description:'',
@@ -97,11 +65,49 @@ var searchModule = function() {
     });
 
     a({
-        id:8,
+        id:4,
+        title:"DocFxAliases",
+        content:"DocFxAliases",
+        description:'',
+        tags:''
+    });
+
+    a({
+        id:5,
+        title:"DocFxMetadataSettings",
+        content:"DocFxMetadataSettings",
+        description:'',
+        tags:''
+    });
+
+    a({
+        id:6,
         title:"DocFxGlobalMetadata",
         content:"DocFxGlobalMetadata",
         description:'',
         tags:''
+    });
+
+    a({
+        id:7,
+        title:"DocFxBuildAliases",
+        content:"DocFxBuildAliases",
+        description:'',
+        tags:''
+    });
+
+    a({
+        id:8,
+        title:"DocFxInitAliases",
+        content:"DocFxInitAliases",
+        description:'',
+        tags:''
+    });
+
+    y({
+        url:'/Cake.DocFx/Cake.DocFx/api/Cake.DocFx/DocFxSettings',
+        title:"DocFxSettings",
+        description:""
     });
 
     y({
@@ -117,26 +123,8 @@ var searchModule = function() {
     });
 
     y({
-        url:'/Cake.DocFx/Cake.DocFx/api/Cake.DocFx/DocFxBuildAliases',
-        title:"DocFxBuildAliases",
-        description:""
-    });
-
-    y({
-        url:'/Cake.DocFx/Cake.DocFx/api/Cake.DocFx/DocFxInitAliases',
-        title:"DocFxInitAliases",
-        description:""
-    });
-
-    y({
-        url:'/Cake.DocFx/Cake.DocFx/api/Cake.DocFx.Metadata/DocFxMetadataSettings',
-        title:"DocFxMetadataSettings",
-        description:""
-    });
-
-    y({
-        url:'/Cake.DocFx/Cake.DocFx/api/Cake.DocFx/DocFxSettings',
-        title:"DocFxSettings",
+        url:'/Cake.DocFx/Cake.DocFx/api/Cake.DocFx/DocFxMetadataAliases',
+        title:"DocFxMetadataAliases",
         description:""
     });
 
@@ -147,14 +135,26 @@ var searchModule = function() {
     });
 
     y({
-        url:'/Cake.DocFx/Cake.DocFx/api/Cake.DocFx/DocFxMetadataAliases',
-        title:"DocFxMetadataAliases",
+        url:'/Cake.DocFx/Cake.DocFx/api/Cake.DocFx.Metadata/DocFxMetadataSettings',
+        title:"DocFxMetadataSettings",
         description:""
     });
 
     y({
         url:'/Cake.DocFx/Cake.DocFx/api/Cake.DocFx/DocFxGlobalMetadata',
         title:"DocFxGlobalMetadata",
+        description:""
+    });
+
+    y({
+        url:'/Cake.DocFx/Cake.DocFx/api/Cake.DocFx/DocFxBuildAliases',
+        title:"DocFxBuildAliases",
+        description:""
+    });
+
+    y({
+        url:'/Cake.DocFx/Cake.DocFx/api/Cake.DocFx/DocFxInitAliases',
+        title:"DocFxInitAliases",
         description:""
     });
 
