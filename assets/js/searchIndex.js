@@ -34,62 +34,6 @@ var searchModule = function() {
 
     a({
         id:0,
-        title:"DocFxSettings",
-        content:"DocFxSettings",
-        description:'',
-        tags:''
-    });
-
-    a({
-        id:1,
-        title:"DocFxInitSettings",
-        content:"DocFxInitSettings",
-        description:'',
-        tags:''
-    });
-
-    a({
-        id:2,
-        title:"DocFxBuildSettings",
-        content:"DocFxBuildSettings",
-        description:'',
-        tags:''
-    });
-
-    a({
-        id:3,
-        title:"DocFxMetadataAliases",
-        content:"DocFxMetadataAliases",
-        description:'',
-        tags:''
-    });
-
-    a({
-        id:4,
-        title:"DocFxAliases",
-        content:"DocFxAliases",
-        description:'',
-        tags:''
-    });
-
-    a({
-        id:5,
-        title:"DocFxMetadataSettings",
-        content:"DocFxMetadataSettings",
-        description:'',
-        tags:''
-    });
-
-    a({
-        id:6,
-        title:"DocFxGlobalMetadata",
-        content:"DocFxGlobalMetadata",
-        description:'',
-        tags:''
-    });
-
-    a({
-        id:7,
         title:"DocFxBuildAliases",
         content:"DocFxBuildAliases",
         description:'',
@@ -97,16 +41,84 @@ var searchModule = function() {
     });
 
     a({
-        id:8,
+        id:1,
+        title:"DocFxSettings",
+        content:"DocFxSettings",
+        description:'',
+        tags:''
+    });
+
+    a({
+        id:2,
+        title:"DocFxMetadataSettings",
+        content:"DocFxMetadataSettings",
+        description:'',
+        tags:''
+    });
+
+    a({
+        id:3,
+        title:"DocFxInitSettings",
+        content:"DocFxInitSettings",
+        description:'',
+        tags:''
+    });
+
+    a({
+        id:4,
+        title:"DocFxBuildSettings",
+        content:"DocFxBuildSettings",
+        description:'',
+        tags:''
+    });
+
+    a({
+        id:5,
         title:"DocFxInitAliases",
         content:"DocFxInitAliases",
         description:'',
         tags:''
     });
 
+    a({
+        id:6,
+        title:"DocFxAliases",
+        content:"DocFxAliases",
+        description:'',
+        tags:''
+    });
+
+    a({
+        id:7,
+        title:"DocFxMetadataAliases",
+        content:"DocFxMetadataAliases",
+        description:'',
+        tags:''
+    });
+
+    a({
+        id:8,
+        title:"DocFxGlobalMetadata",
+        content:"DocFxGlobalMetadata",
+        description:'',
+        tags:''
+    });
+
+    y({
+        url:'/Cake.DocFx/Cake.DocFx/api/Cake.DocFx/DocFxBuildAliases',
+        title:"DocFxBuildAliases",
+        description:""
+    });
+
     y({
         url:'/Cake.DocFx/Cake.DocFx/api/Cake.DocFx/DocFxSettings',
         title:"DocFxSettings",
+        description:""
+    });
+
+    y({
+        url:'/Cake.DocFx/Cake.DocFx/api/Cake.DocFx.Metadata/DocFxMetadataSettings',
+        title:"DocFxMetadataSettings",
         description:""
     });
 
@@ -123,8 +135,8 @@ var searchModule = function() {
     });
 
     y({
-        url:'/Cake.DocFx/Cake.DocFx/api/Cake.DocFx/DocFxMetadataAliases',
-        title:"DocFxMetadataAliases",
+        url:'/Cake.DocFx/Cake.DocFx/api/Cake.DocFx/DocFxInitAliases',
+        title:"DocFxInitAliases",
         description:""
     });
 
@@ -135,26 +147,14 @@ var searchModule = function() {
     });
 
     y({
-        url:'/Cake.DocFx/Cake.DocFx/api/Cake.DocFx.Metadata/DocFxMetadataSettings',
-        title:"DocFxMetadataSettings",
+        url:'/Cake.DocFx/Cake.DocFx/api/Cake.DocFx/DocFxMetadataAliases',
+        title:"DocFxMetadataAliases",
         description:""
     });
 
     y({
         url:'/Cake.DocFx/Cake.DocFx/api/Cake.DocFx/DocFxGlobalMetadata',
         title:"DocFxGlobalMetadata",
-        description:""
-    });
-
-    y({
-        url:'/Cake.DocFx/Cake.DocFx/api/Cake.DocFx/DocFxBuildAliases',
-        title:"DocFxBuildAliases",
-        description:""
-    });
-
-    y({
-        url:'/Cake.DocFx/Cake.DocFx/api/Cake.DocFx/DocFxInitAliases',
-        title:"DocFxInitAliases",
         description:""
     });
 
