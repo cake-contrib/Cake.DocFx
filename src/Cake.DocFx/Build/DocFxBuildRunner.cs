@@ -1,14 +1,15 @@
-﻿using Cake.Core;
+﻿using System.Linq;
+using Cake.Core;
 using Cake.Core.IO;
 using Cake.Core.Tooling;
 using Cake.DocFx.Helper;
 
-namespace Cake.DocFx
+namespace Cake.DocFx.Build
 {
     /// <summary>
-    /// Command line runner for the 'docfx build' command.
+    /// Command line runner for the <c>docfx build</c> command.
     /// </summary>
-    public sealed class DocFxBuildRunner : DocFxTool<DocFxBuildSettings>
+    internal sealed class DocFxBuildRunner : DocFxTool<DocFxBuildSettings>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="DocFxBuildRunner"/> class.
@@ -50,6 +51,16 @@ namespace Cake.DocFx
 
             if (settings.TemplateFolder != null)
                 builder.Append("-t \"{0}\"", settings.TemplateFolder.FullPath);
+
+            if (settings.GlobalMetadata.Any())
+                builder.Append(
+                    "--globalMetadata \"{{{0}}}\"",
+                    string.Join(", ", settings.GlobalMetadata.Select(x => $"\\\"{x.Key}\\\": \\\"{x.Value}\\\"")));
+
+            if (settings.Serve)
+            {
+                builder.Append("--serve");
+            }
 
             return builder;
         }

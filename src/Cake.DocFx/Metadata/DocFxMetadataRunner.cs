@@ -3,12 +3,12 @@ using Cake.Core;
 using Cake.Core.IO;
 using Cake.Core.Tooling;
 
-namespace Cake.DocFx
+namespace Cake.DocFx.Metadata
 {
     /// <summary>
-    /// Command line runner for the 'docfx metadata' command.
+    /// Command line runner for the <c>docfx metadata</c> command.
     /// </summary>
-    public sealed class DocFxMetadataRunner : DocFxTool<DocFxMetadataSettings>
+    internal sealed class DocFxMetadataRunner : DocFxTool<DocFxMetadataSettings>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="DocFxMetadataRunner"/> class.
