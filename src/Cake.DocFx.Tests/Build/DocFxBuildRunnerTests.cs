@@ -23,6 +23,22 @@ namespace Cake.DocFx.Tests.Build
             }
 
             [Fact]
+            public void Should_Add_LogPath_To_Arguments_If_Set()
+            {
+                // Given
+                var fixture = new DocFxBuildRunnerFixture
+                {
+                    Settings = { LogPath = @"c:\temp\docfx.log" }
+                };
+
+                // When
+                var result = fixture.Run();
+
+                // Then
+                Assert.Equal("build -l \"c:/temp/docfx.log\"", result.Args);
+            }
+
+            [Fact]
             public void Should_Add_GlobalMetadata_To_Arguments_If_Not_Empty()
             {
                 // Given
