@@ -1,7 +1,7 @@
-﻿namespace Cake.DocFx.Tests.Init
-{
-    using Xunit;
+﻿using Xunit;
 
+namespace Cake.DocFx.Tests.Init
+{
     public class DocFxInitRunnerTests
     {
         public sealed class ThePackMethod

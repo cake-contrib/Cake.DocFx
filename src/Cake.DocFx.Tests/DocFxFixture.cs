@@ -1,9 +1,9 @@
-﻿namespace Cake.DocFx.Tests
-{
-    using Core.IO;
-    using Core.Tooling;
-    using Testing.Fixtures;
+﻿using Cake.Core.IO;
+using Cake.Core.Tooling;
+using Cake.Testing.Fixtures;
 
+namespace Cake.DocFx.Tests
+{
     internal abstract class DocFxFixture<TSettings> : DocFxFixture<TSettings, ToolFixtureResult>
         where TSettings : ToolSettings, new()
     {
