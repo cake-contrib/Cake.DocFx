@@ -49,6 +49,9 @@ namespace Cake.DocFx.Build
             if (settings.OutputPath != null)
                 builder.Append("-o \"{0}\"", settings.OutputPath.FullPath);
 
+            if (settings.LogPath != null)
+                builder.Append("-l \"{0}\"", settings.LogPath.FullPath);
+
             if (settings.TemplateFolder != null)
                 builder.Append("-t \"{0}\"", settings.TemplateFolder.FullPath);
 
