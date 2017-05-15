@@ -1,8 +1,8 @@
 ﻿using Xunit;
 
-namespace Cake.DocFx.Tests.Build
+namespace Cake.DocFx.Tests.Metadata
 {
-    public class DocFxBuildRunnerTests
+    public class DocFxMetadataRunnerTests
     {
         public sealed class TheRunMethod
         {
@@ -10,7 +10,7 @@ namespace Cake.DocFx.Tests.Build
             public void Should_Throw_If_Settings_Are_Null()
             {
                 // Given
-                var fixture = new DocFxBuildRunnerFixture
+                var fixture = new DocFxMetadataRunnerFixture
                 {
                     Settings = null
                 };
@@ -26,7 +26,7 @@ namespace Cake.DocFx.Tests.Build
             public void Should_Add_LogPath_To_Arguments_If_Set()
             {
                 // Given
-                var fixture = new DocFxBuildRunnerFixture
+                var fixture = new DocFxMetadataRunnerFixture
                 {
                     Settings = { LogPath = @"c:\temp\docfx.log" }
                 };
@@ -35,7 +35,7 @@ namespace Cake.DocFx.Tests.Build
                 var result = fixture.Run();
 
                 // Then
-                Assert.Equal("build -l \"c:/temp/docfx.log\"", result.Args);
+                Assert.Equal("metadata -l \"c:/temp/docfx.log\"", result.Args);
             }
 
             [Theory]
@@ -46,7 +46,7 @@ namespace Cake.DocFx.Tests.Build
             public void Should_Add_LogLevel_To_Arguments_If_Set(DocFxLogLevel logLevel, string expectedLevel)
             {
                 // Given
-                var fixture = new DocFxBuildRunnerFixture
+                var fixture = new DocFxMetadataRunnerFixture
                 {
                     Settings = { LogLevel = logLevel }
                 };
@@ -55,14 +55,14 @@ namespace Cake.DocFx.Tests.Build
                 var result = fixture.Run();
 
                 // Then
-                Assert.Equal("build --logLevel \"" + expectedLevel + "\"", result.Args);
+                Assert.Equal("metadata --logLevel \"" + expectedLevel + "\"", result.Args);
             }
 
             [Fact]
             public void Should_Not_Add_LogLevel_To_Arguments_If_Default()
             {
                 // Given
-                var fixture = new DocFxBuildRunnerFixture
+                var fixture = new DocFxMetadataRunnerFixture
                 {
                     Settings = { LogLevel = DocFxLogLevel.Default }
                 };
@@ -71,37 +71,7 @@ namespace Cake.DocFx.Tests.Build
                 var result = fixture.Run();
 
                 // Then
-                Assert.Equal("build", result.Args);
-            }
-
-            [Fact]
-            public void Should_Add_GlobalMetadata_To_Arguments_If_Not_Empty()
-            {
-                // Given
-                var fixture = new DocFxBuildRunnerFixture();
-                fixture.Settings.GlobalMetadata.Add("foo", "bar");
-
-                // When
-                var result = fixture.Run();
-
-                // Then
-                Assert.Equal("build --globalMetadata \"{\\\"foo\\\": \\\"bar\\\"}\"", result.Args);
-            }
-
-            [Fact]
-            public void Should_Add_Serve_To_Arguments_If_True()
-            {
-                // Given
-                var fixture = new DocFxBuildRunnerFixture
-                {
-                    Settings = {Serve = true}
-                };
-
-                // When
-                var result = fixture.Run();
-
-                // Then
-                Assert.Equal("build --serve", result.Args);
+                Assert.Equal("metadata", result.Args);
             }
         }
     }

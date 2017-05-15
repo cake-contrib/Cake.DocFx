@@ -1,8 +1,8 @@
-﻿namespace Cake.DocFx.Tests
-{
-    using System;
-    using Xunit;
+﻿using System;
+using Xunit;
 
+namespace Cake.DocFx.Tests
+{
     public static class ExceptionAssertExtensions
     {
         public static void IsArgumentNullException(this Exception exception, string parameterName)

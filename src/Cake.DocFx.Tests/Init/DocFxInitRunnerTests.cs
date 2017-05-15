@@ -1,10 +1,10 @@
-﻿namespace Cake.DocFx.Tests.Init
-{
-    using Xunit;
+﻿using Xunit;
 
+namespace Cake.DocFx.Tests.Init
+{
     public class DocFxInitRunnerTests
     {
-        public sealed class ThePackMethod
+        public sealed class TheRunMethod
         {
             [Fact]
             public void Should_Throw_If_Settings_Are_Null()

@@ -46,8 +46,16 @@ namespace Cake.DocFx.Build
             if (configFile != null)
                 builder.Append("\"{0}\"", configFile.FullPath);
 
+            #region DupFinder Exclusion
             if (settings.OutputPath != null)
                 builder.Append("-o \"{0}\"", settings.OutputPath.FullPath);
+
+            if (settings.LogPath != null)
+                builder.Append("-l \"{0}\"", settings.LogPath.FullPath);
+
+            if (settings.LogLevel != DocFxLogLevel.Default)
+                builder.Append("--logLevel \"{0}\"", settings.LogLevel);
+            #endregion
 
             if (settings.TemplateFolder != null)
                 builder.Append("-t \"{0}\"", settings.TemplateFolder.FullPath);
