@@ -42,8 +42,16 @@ namespace Cake.DocFx.Metadata
             if (settings.Projects != null && settings.Projects.Any())
                 builder.Append(string.Join(",", settings.Projects.Select(val => val.FullPath)));
 
+            #region DupFinder Exclusion
             if (settings.OutputPath != null)
                 builder.Append("-o \"{0}\"", settings.OutputPath.FullPath);
+
+            if (settings.LogPath != null)
+                builder.Append("-l \"{0}\"", settings.LogPath.FullPath);
+
+            if (settings.LogLevel != DocFxLogLevel.Default)
+                builder.Append("--logLevel \"{0}\"", settings.LogLevel);
+            #endregion
 
             return builder;
         }
