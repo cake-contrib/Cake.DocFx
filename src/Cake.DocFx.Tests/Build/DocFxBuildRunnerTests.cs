@@ -38,6 +38,42 @@ namespace Cake.DocFx.Tests.Build
                 Assert.Equal("build -l \"c:/temp/docfx.log\"", result.Args);
             }
 
+            [Theory]
+            [InlineData(DocFxLogLevel.Error, "Error")]
+            [InlineData(DocFxLogLevel.Warning, "Warning")]
+            [InlineData(DocFxLogLevel.Info, "Info")]
+            [InlineData(DocFxLogLevel.Verbose, "Verbose")]
+            public void Should_Add_LogLevel_To_Arguments_If_Set(DocFxLogLevel logLevel, string expectedLevel)
+            {
+                // Given
+                var fixture = new DocFxBuildRunnerFixture
+                {
+                    Settings = { LogLevel = logLevel }
+                };
+
+                // When
+                var result = fixture.Run();
+
+                // Then
+                Assert.Equal("build --logLevel \"" + expectedLevel + "\"", result.Args);
+            }
+
+            [Fact]
+            public void Should_Not_Add_LogLevel_To_Arguments_If_Default()
+            {
+                // Given
+                var fixture = new DocFxBuildRunnerFixture
+                {
+                    Settings = { LogLevel = DocFxLogLevel.Default }
+                };
+
+                // When
+                var result = fixture.Run();
+
+                // Then
+                Assert.Equal("build", result.Args);
+            }
+
             [Fact]
             public void Should_Add_GlobalMetadata_To_Arguments_If_Not_Empty()
             {

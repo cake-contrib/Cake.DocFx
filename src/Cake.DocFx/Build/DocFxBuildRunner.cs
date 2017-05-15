@@ -52,6 +52,9 @@ namespace Cake.DocFx.Build
             if (settings.LogPath != null)
                 builder.Append("-l \"{0}\"", settings.LogPath.FullPath);
 
+            if (settings.LogLevel != DocFxLogLevel.Default)
+                builder.Append("--logLevel \"{0}\"", settings.LogLevel);
+
             if (settings.TemplateFolder != null)
                 builder.Append("-t \"{0}\"", settings.TemplateFolder.FullPath);
 

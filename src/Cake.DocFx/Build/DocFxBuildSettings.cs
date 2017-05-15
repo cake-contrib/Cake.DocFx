@@ -23,6 +23,11 @@ namespace Cake.DocFx.Build
         public FilePath LogPath { get; set; }
 
         /// <summary>
+        /// Gets or sets to which log level will be logged.
+        /// </summary>
+        public DocFxLogLevel LogLevel { get; set; }
+
+        /// <summary>
         /// Gets or sets the template path to use. If not specified, the default template configured 
         /// in the 'build' section of docfx.json will be used.
         /// </summary>

@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DocFxLogLevel.cs" />
     <Compile Include="Build\DocFxBuildRunner.cs" />
     <Compile Include="Build\DocFxBuildSettings.cs" />
     <Compile Include="DocFxMetadataAliases.cs" />
