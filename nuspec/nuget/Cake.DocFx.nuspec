@@ -13,7 +13,7 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <copyright>Copyright (c) Cake Contributions 2016 - Present</copyright>
     <tags>Cake Script DocFx</tags>
-    <releaseNotes>https://github.com/cake-contrib/Cake.DocFx/releases/tag/0.3.0</releaseNotes>
+    <releaseNotes>https://github.com/cake-contrib/Cake.DocFx/releases/tag/0.4.0</releaseNotes>
   </metadata>
   <files>
     <file src="Cake.DocFx.dll" target="lib\net45" />
