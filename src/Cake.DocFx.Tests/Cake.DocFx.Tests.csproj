@@ -70,6 +70,8 @@
     <Compile Include="Init\DocFxInitRunnerFixture.cs" />
     <Compile Include="Init\DocFxInitRunnerTests.cs" />
     <Compile Include="ExceptionAssertExtensions.cs" />
+    <Compile Include="Metadata\DocFxMetadataRunnerFixture.cs" />
+    <Compile Include="Metadata\DocFxMetadataRunnerTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
