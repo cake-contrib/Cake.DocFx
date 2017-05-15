@@ -10,6 +10,7 @@
     <summary>The DocFx Addin for Cake allows you to generated API documentation directly from .NET source code.</summary>
     <licenseUrl>https://github.com/cake-contrib/Cake.DocFx/blob/develop/LICENSE</licenseUrl>
     <projectUrl>https://github.com/cake-contrib/Cake.DocFx</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/cake-build/graphics/aba74fb4cb5fe9454381af2cc70c870088229d5c/png/cake-medium.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <copyright>Copyright (c) Cake Contributions 2016 - Present</copyright>
     <tags>Cake Script DocFx</tags>
