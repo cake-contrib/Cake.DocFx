@@ -4,7 +4,7 @@ namespace Cake.DocFx.Tests.Build
 {
     public class DocFxBuildRunnerTests
     {
-        public sealed class ThePackMethod
+        public sealed class TheRunMethod
         {
             [Fact]
             public void Should_Throw_If_Settings_Are_Null()
