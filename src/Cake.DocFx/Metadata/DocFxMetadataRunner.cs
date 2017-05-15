@@ -2,6 +2,7 @@
 using Cake.Core;
 using Cake.Core.IO;
 using Cake.Core.Tooling;
+using Cake.DocFx.Helper;
 
 namespace Cake.DocFx.Metadata
 {
@@ -28,6 +29,8 @@ namespace Cake.DocFx.Metadata
         /// <param name="settings">The settings.</param>
         public void Run(DocFxMetadataSettings settings)
         {
+            Contract.NotNull(settings, nameof(settings));
+
             Run(settings, GetArguments(settings));
         }
 

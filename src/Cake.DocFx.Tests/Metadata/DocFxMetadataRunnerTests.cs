@@ -7,6 +7,22 @@ namespace Cake.DocFx.Tests.Metadata
         public sealed class TheRunMethod
         {
             [Fact]
+            public void Should_Throw_If_Settings_Are_Null()
+            {
+                // Given
+                var fixture = new DocFxMetadataRunnerFixture
+                {
+                    Settings = null
+                };
+
+                // When
+                var result = Record.Exception(() => fixture.Run());
+
+                // Then
+                result.IsArgumentNullException("settings");
+            }
+
+            [Fact]
             public void Should_Add_LogPath_To_Arguments_If_Set()
             {
                 // Given
