@@ -7,7 +7,6 @@ namespace Cake.DocFx
     /// <summary>
     /// Obsolete use aliases from <see cref="DocFxBuildAliases"/> instead.
     /// </summary>
-    [Obsolete("Use DocFxBuild instead.")]
     public class DocFxSettings : ToolSettings
     {
         /// <summary>
