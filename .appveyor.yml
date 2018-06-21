@@ -1,4 +1,9 @@
 #---------------------------------#
+#  Build Image                    #
+#---------------------------------#
+image: Visual Studio 2017
+
+#---------------------------------#
 #  Build Script                   #
 #---------------------------------#
 build_script:
@@ -22,5 +27,4 @@ branches:
 #  Build Cache                    #
 #---------------------------------#
 cache:
-- src\packages -> src\**\packages.config
 - tools -> setup.cake
