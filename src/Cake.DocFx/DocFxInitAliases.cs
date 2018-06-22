@@ -10,7 +10,7 @@ namespace Cake.DocFx
     /// projects.
     /// </summary>
     [CakeAliasCategory("DocFx")]
-    [CakeNamespaceImport("Cake.DocFx.Build")]
+    [CakeNamespaceImport("Cake.DocFx.Init")]
     public static class DocFxInitAliases
     {
         /// <summary>
