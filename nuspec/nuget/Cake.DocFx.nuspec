@@ -17,8 +17,8 @@
     <releaseNotes>https://github.com/cake-contrib/Cake.DocFx/releases/tag/0.6.0</releaseNotes>
   </metadata>
   <files>
-    <file src="Cake.DocFx.dll" target="lib\net45" />
-    <file src="Cake.DocFx.pdb" target="lib\net45" />
-    <file src="Cake.DocFx.xml" target="lib\net45" />
+    <file src="netstandard2.0\Cake.DocFx.dll" target="lib\netstandard2.0" />
+    <file src="netstandard2.0\Cake.DocFx.pdb" target="lib\netstandard2.0" />
+    <file src="netstandard2.0\Cake.DocFx.xml" target="lib\netstandard2.0" />
   </files>
 </package>
