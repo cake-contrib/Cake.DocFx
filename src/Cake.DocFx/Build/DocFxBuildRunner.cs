@@ -70,6 +70,11 @@ namespace Cake.DocFx.Build
                 builder.Append("--serve");
             }
 
+            if (settings.Force)
+            {
+                builder.Append("--force");
+            }
+
             return builder;
         }
     }
