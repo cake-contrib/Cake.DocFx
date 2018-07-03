@@ -45,5 +45,10 @@ namespace Cake.DocFx.Build
         /// in a built in web server. 
         /// </summary>
         public bool Serve { get; set; }
+
+        /// <summary>
+        /// Gets or sets a value indicating whether all the documentation is re-build.
+        /// </summary>
+        public bool Force { get; set; }
     }
 }

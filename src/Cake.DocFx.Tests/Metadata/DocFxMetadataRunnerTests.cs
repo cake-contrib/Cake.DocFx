@@ -73,6 +73,22 @@ namespace Cake.DocFx.Tests.Metadata
                 // Then
                 Assert.Equal("metadata", result.Args);
             }
+
+            [Fact]
+            public void Should_Add_Force_To_Arguments_If_True()
+            {
+                // Given
+                var fixture = new DocFxMetadataRunnerFixture
+                {
+                    Settings = {Force = true}
+                };
+
+                // When
+                var result = fixture.Run();
+
+                // Then
+                Assert.Equal("metadata --force", result.Args);
+            }
         }
     }
 }

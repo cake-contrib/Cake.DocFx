@@ -56,6 +56,11 @@ namespace Cake.DocFx.Metadata
                 builder.Append("--logLevel \"{0}\"", settings.LogLevel);
             #endregion
 
+            if (settings.Force)
+            {
+                builder.Append("--force");
+            }
+
             return builder;
         }
     }

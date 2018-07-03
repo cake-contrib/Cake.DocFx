@@ -103,6 +103,22 @@ namespace Cake.DocFx.Tests.Build
                 // Then
                 Assert.Equal("build --serve", result.Args);
             }
+
+            [Fact]
+            public void Should_Add_Force_To_Arguments_If_True()
+            {
+                // Given
+                var fixture = new DocFxBuildRunnerFixture
+                {
+                    Settings = {Force = true}
+                };
+
+                // When
+                var result = fixture.Run();
+
+                // Then
+                Assert.Equal("build --force", result.Args);
+            }
         }
     }
 }
