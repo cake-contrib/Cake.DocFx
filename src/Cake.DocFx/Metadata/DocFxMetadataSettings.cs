@@ -35,5 +35,10 @@ namespace Cake.DocFx.Metadata
         /// Gets or sets to which log level will be logged.
         /// </summary>
         public DocFxLogLevel LogLevel { get; set; }
+
+        /// <summary>
+        /// Gets or sets a value indicating whether all the documentation is re-build.
+        /// </summary>
+        public bool Force { get; set; }
     }
 }

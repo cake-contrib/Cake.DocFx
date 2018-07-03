@@ -1,8 +1,8 @@
 ﻿using Xunit;
 
-namespace Cake.DocFx.Tests.Build
+namespace Cake.DocFx.Tests.Pdf
 {
-    public class DocFxBuildRunnerTests
+    public class DocFxPdfRunnerTests
     {
         public sealed class TheRunMethod
         {
@@ -10,7 +10,7 @@ namespace Cake.DocFx.Tests.Build
             public void Should_Throw_If_Settings_Are_Null()
             {
                 // Given
-                var fixture = new DocFxBuildRunnerFixture
+                var fixture = new DocFxPdfRunnerFixture
                 {
                     Settings = null
                 };
@@ -22,11 +22,28 @@ namespace Cake.DocFx.Tests.Build
                 result.IsArgumentNullException("settings");
             }
 
+
+            [Fact]
+            public void Should_Be_Pdf_Command()
+            {
+                // Given
+                var fixture = new DocFxPdfRunnerFixture
+                {
+                    Settings = {}
+                };
+
+                // When
+                var result = fixture.Run();
+
+                // Then
+                Assert.Equal("pdf", result.Args);
+            }
+
             [Fact]
             public void Should_Add_LogPath_To_Arguments_If_Set()
             {
                 // Given
-                var fixture = new DocFxBuildRunnerFixture
+                var fixture = new DocFxPdfRunnerFixture
                 {
                     Settings = { LogPath = @"c:\temp\docfx.log" }
                 };
@@ -35,7 +52,7 @@ namespace Cake.DocFx.Tests.Build
                 var result = fixture.Run();
 
                 // Then
-                Assert.Equal("build -l \"c:/temp/docfx.log\"", result.Args);
+                Assert.Equal("pdf -l \"c:/temp/docfx.log\"", result.Args);
             }
 
             [Theory]
@@ -46,7 +63,7 @@ namespace Cake.DocFx.Tests.Build
             public void Should_Add_LogLevel_To_Arguments_If_Set(DocFxLogLevel logLevel, string expectedLevel)
             {
                 // Given
-                var fixture = new DocFxBuildRunnerFixture
+                var fixture = new DocFxPdfRunnerFixture
                 {
                     Settings = { LogLevel = logLevel }
                 };
@@ -55,14 +72,14 @@ namespace Cake.DocFx.Tests.Build
                 var result = fixture.Run();
 
                 // Then
-                Assert.Equal("build --logLevel \"" + expectedLevel + "\"", result.Args);
+                Assert.Equal("pdf --logLevel \"" + expectedLevel + "\"", result.Args);
             }
 
             [Fact]
             public void Should_Not_Add_LogLevel_To_Arguments_If_Default()
             {
                 // Given
-                var fixture = new DocFxBuildRunnerFixture
+                var fixture = new DocFxPdfRunnerFixture
                 {
                     Settings = { LogLevel = DocFxLogLevel.Default }
                 };
@@ -71,53 +88,35 @@ namespace Cake.DocFx.Tests.Build
                 var result = fixture.Run();
 
                 // Then
-                Assert.Equal("build", result.Args);
+                Assert.Equal("pdf", result.Args);
             }
 
             [Fact]
             public void Should_Add_GlobalMetadata_To_Arguments_If_Not_Empty()
             {
                 // Given
-                var fixture = new DocFxBuildRunnerFixture();
+                var fixture = new DocFxPdfRunnerFixture();
                 fixture.Settings.GlobalMetadata.Add("foo", "bar");
 
                 // When
                 var result = fixture.Run();
 
                 // Then
-                Assert.Equal("build --globalMetadata \"{\\\"foo\\\": \\\"bar\\\"}\"", result.Args);
+                Assert.Equal("pdf --globalMetadata \"{\\\"foo\\\": \\\"bar\\\"}\"", result.Args);
             }
 
             [Fact]
-            public void Should_Add_Serve_To_Arguments_If_True()
+            public void Should_Add_Name_To_Arguments_If_Not_Empty()
             {
                 // Given
-                var fixture = new DocFxBuildRunnerFixture
-                {
-                    Settings = {Serve = true}
-                };
+                var fixture = new DocFxPdfRunnerFixture();
+                fixture.Settings.Name = "foo";
 
                 // When
                 var result = fixture.Run();
 
                 // Then
-                Assert.Equal("build --serve", result.Args);
-            }
-
-            [Fact]
-            public void Should_Add_Force_To_Arguments_If_True()
-            {
-                // Given
-                var fixture = new DocFxBuildRunnerFixture
-                {
-                    Settings = {Force = true}
-                };
-
-                // When
-                var result = fixture.Run();
-
-                // Then
-                Assert.Equal("build --force", result.Args);
+                Assert.Equal("pdf --name \"foo\"", result.Args);
             }
         }
     }

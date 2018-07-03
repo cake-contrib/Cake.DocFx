@@ -4,43 +4,43 @@ using Cake.Core.IO;
 using Cake.Core.Tooling;
 using Cake.DocFx.Helper;
 
-namespace Cake.DocFx.Build
+namespace Cake.DocFx.Pdf
 {
     /// <summary>
-    /// Command line runner for the <c>docfx build</c> command.
+    /// Command line runner for the <c>docfx pdf</c> command.
     /// </summary>
-    internal sealed class DocFxBuildRunner : DocFxTool<DocFxBuildSettings>
+    internal sealed class DocFxPdfRunner : DocFxTool<DocFxPdfSettings>
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="DocFxBuildRunner"/> class.
+        /// Initializes a new instance of the <see cref="DocFxPdfRunner"/> class.
         /// </summary>
         /// <param name="fileSystem">The file system.</param>
         /// <param name="environment">The environment.</param>
         /// <param name="processRunner">The process runner.</param>
-        /// <param name="tools">The tools.</param>
-        public DocFxBuildRunner(IFileSystem fileSystem, ICakeEnvironment environment, IProcessRunner processRunner, IToolLocator tools) 
+        /// <param name="tools">The tool locator.</param>
+        public DocFxPdfRunner(IFileSystem fileSystem, ICakeEnvironment environment, IProcessRunner processRunner, IToolLocator tools) 
             : base(fileSystem, environment, processRunner, tools)
         {
         }
 
         /// <summary>
-        /// Runs DocFx for the current folder with the given configuration.
+        /// Runs DocFx generator with the given configuration.
         /// </summary>
-        /// <param name="path">The optional path to the docfx.json config file.</param>
+        /// <param name="configFile">The optional path to the docfx.json config file.</param>
         /// <param name="settings">The settings.</param>
-        public void Run(FilePath path, DocFxBuildSettings settings)
+        public void Run(FilePath configFile, DocFxPdfSettings settings)
         {
             Contract.NotNull(settings, nameof(settings));
 
-            Run(settings, GetArguments(path, settings));
+            Run(settings, GetArguments(configFile, settings));
         }
 
-        private ProcessArgumentBuilder GetArguments(FilePath configFile, DocFxBuildSettings settings)
+        private ProcessArgumentBuilder GetArguments(FilePath configFile, DocFxPdfSettings settings)
         {
             var builder = new ProcessArgumentBuilder();
 
             // command
-            builder.Append("build");
+            builder.Append("pdf");
 
             // parameters
             #region DupFinder Exclusion
@@ -64,16 +64,9 @@ namespace Cake.DocFx.Build
                     "--globalMetadata \"{{{0}}}\"",
                     string.Join(", ", settings.GlobalMetadata.Select(x => $"\\\"{x.Key}\\\": \\\"{x.Value}\\\"")));
 
-            if (settings.Serve)
-            {
-                builder.Append("--serve");
-            }
+            if (settings.Name != null)
+                builder.Append("--name \"{0}\"", settings.Name);
             #endregion
-
-            if (settings.Force)
-            {
-                builder.Append("--force");
-            }
 
             return builder;
         }
