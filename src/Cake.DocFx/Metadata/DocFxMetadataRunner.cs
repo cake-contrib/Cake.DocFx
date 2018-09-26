@@ -43,7 +43,7 @@ namespace Cake.DocFx.Metadata
 
             // parameters
             if (settings.Projects != null && settings.Projects.Any())
-                builder.Append(string.Join(",", settings.Projects.Select(val => val.FullPath)));
+                builder.Append(string.Join(",", settings.Projects.Select(val => "\"" + val.FullPath + "\"")));
 
             #region DupFinder Exclusion
             if (settings.OutputPath != null)

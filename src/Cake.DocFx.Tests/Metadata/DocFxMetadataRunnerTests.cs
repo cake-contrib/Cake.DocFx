@@ -1,4 +1,6 @@
-﻿using Xunit;
+﻿using Cake.Core.IO;
+using System.Collections.Generic;
+using Xunit;
 
 namespace Cake.DocFx.Tests.Metadata
 {
@@ -20,6 +22,77 @@ namespace Cake.DocFx.Tests.Metadata
 
                 // Then
                 result.IsArgumentNullException("settings");
+            }
+
+            [Fact]
+            public void Should_Add_Project_To_Arguments_If_Set()
+            {
+                // Given
+                var fixture = new DocFxMetadataRunnerFixture
+                {
+                    Settings = { Projects = new List<FilePath> { @"c:\temp\docfx.json" }  }
+                };
+
+                // When
+                var result = fixture.Run();
+
+                // Then
+                Assert.Equal("metadata \"c:/temp/docfx.json\"", result.Args);
+            }
+
+            [Fact]
+            public void Should_Add_Project_With_Space_In_Path_To_Arguments_If_Set()
+            {
+                // Given
+                var fixture = new DocFxMetadataRunnerFixture
+                {
+                    Settings = { Projects = new List<FilePath> { @"c:\foo bar\docfx.json" } }
+                };
+
+                // When
+                var result = fixture.Run();
+
+                // Then
+                Assert.Equal("metadata \"c:/foo bar/docfx.json\"", result.Args);
+            }
+
+            [Fact]
+            public void Should_Add_Multiple_Projects_To_Arguments_If_Set()
+            {
+                // Given
+                var fixture = new DocFxMetadataRunnerFixture
+                {
+                    Settings =
+                    {
+                        Projects = new List<FilePath>
+                        {
+                            @"c:\temp\foo.csproj",
+                            @"c:\temp\bar.csproj"
+                        }
+                    }
+                };
+
+                // When
+                var result = fixture.Run();
+
+                // Then
+                Assert.Equal("metadata \"c:/temp/foo.csproj\",\"c:/temp/bar.csproj\"", result.Args);
+            }
+
+            [Fact]
+            public void Should_Add_OutputPath_To_Arguments_If_Set()
+            {
+                // Given
+                var fixture = new DocFxMetadataRunnerFixture
+                {
+                    Settings = { OutputPath = @"c:\temp\api" }
+                };
+
+                // When
+                var result = fixture.Run();
+
+                // Then
+                Assert.Equal("metadata -o \"c:/temp/api\"", result.Args);
             }
 
             [Fact]
