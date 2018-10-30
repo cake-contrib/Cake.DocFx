@@ -54,7 +54,7 @@ namespace Cake.DocFx
         /// <code>
         /// DocFxMerge(new DocFxMergeSettings
         /// {
-        ///     GlobalMetadataFile = "./docs/globalMetdata.json",
+        ///     TocMetadata = { "platform" },
         ///     WarningsAsErrors = true
         /// });
         /// </code>
@@ -76,7 +76,7 @@ namespace Cake.DocFx
         /// <code>
         /// DocFxMerge("./docs/docfx.json", new DocFxMergeSettings
         /// {
-        ///     GlobalMetadataFile = "./docs/globalMetdata.json",
+        ///     TocMetadata = { "platform" },
         ///     WarningsAsErrors = true
         /// });
         /// </code>
