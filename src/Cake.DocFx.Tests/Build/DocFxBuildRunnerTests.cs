@@ -119,6 +119,23 @@ namespace Cake.DocFx.Tests.Build
                 // Then
                 Assert.Equal("build --force", result.Args);
             }
+
+
+            [Fact]
+            public void Should_Add_WarningsAsErrors_To_Arguments_If_True()
+            {
+                // Given
+                var fixture = new DocFxBuildRunnerFixture
+                {
+                    Settings = { WarningsAsErrors = true }
+                };
+
+                // When
+                var result = fixture.Run();
+
+                // Then
+                Assert.Equal("build --warningsAsErrors", result.Args);
+            }
         }
     }
 }

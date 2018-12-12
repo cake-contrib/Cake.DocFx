@@ -75,6 +75,11 @@ namespace Cake.DocFx.Build
                 builder.Append("--force");
             }
 
+            if (settings.WarningsAsErrors)
+            {
+                builder.Append("--warningsAsErrors");
+            }
+
             return builder;
         }
     }
