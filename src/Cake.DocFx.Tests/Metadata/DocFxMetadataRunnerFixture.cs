@@ -12,7 +12,7 @@ namespace Cake.DocFx.Tests.Metadata
         protected override void RunTool()
         {
             var tool = new DocFxMetadataRunner(FileSystem, Environment, ProcessRunner, Tools);
-            tool.Run(Settings);
+            tool.Run(null, Settings);
         }
     }
 }
