@@ -50,5 +50,10 @@ namespace Cake.DocFx.Build
         /// Gets or sets a value indicating whether all the documentation is re-build.
         /// </summary>
         public bool Force { get; set; }
+
+        /// <summary>
+        /// Gets or sets a value indicating whether all warnings must be seen as errors
+        /// </summary>
+        public bool WarningsAsErrors { get; set; }
     }
 }
