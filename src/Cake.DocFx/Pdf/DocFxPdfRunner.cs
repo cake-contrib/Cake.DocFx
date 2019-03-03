@@ -2,14 +2,13 @@
 using Cake.Core;
 using Cake.Core.IO;
 using Cake.Core.Tooling;
-using Cake.DocFx.Helper;
 
 namespace Cake.DocFx.Pdf
 {
     /// <summary>
     /// Command line runner for the <c>docfx pdf</c> command.
     /// </summary>
-    internal sealed class DocFxPdfRunner : DocFxTool<DocFxPdfSettings>
+    internal sealed class DocFxPdfRunner : BaseLoggingDocFxRunner<DocFxPdfSettings>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="DocFxPdfRunner"/> class.
@@ -23,22 +22,9 @@ namespace Cake.DocFx.Pdf
         {
         }
 
-        /// <summary>
-        /// Runs DocFx generator with the given configuration.
-        /// </summary>
-        /// <param name="configFile">The optional path to the docfx.json config file.</param>
-        /// <param name="settings">The settings.</param>
-        public void Run(FilePath configFile, DocFxPdfSettings settings)
+        /// <inheritdoc/>
+        protected override void GetArguments(ProcessArgumentBuilder builder, FilePath configFile, DocFxPdfSettings settings)
         {
-            Contract.NotNull(settings, nameof(settings));
-
-            Run(settings, GetArguments(configFile, settings));
-        }
-
-        private ProcessArgumentBuilder GetArguments(FilePath configFile, DocFxPdfSettings settings)
-        {
-            var builder = new ProcessArgumentBuilder();
-
             // command
             builder.Append("pdf");
 
@@ -49,12 +35,6 @@ namespace Cake.DocFx.Pdf
 
             if (settings.OutputPath != null)
                 builder.Append("-o \"{0}\"", settings.OutputPath.FullPath);
-
-            if (settings.LogPath != null)
-                builder.Append("-l \"{0}\"", settings.LogPath.FullPath);
-
-            if (settings.LogLevel != DocFxLogLevel.Default)
-                builder.Append("--logLevel \"{0}\"", settings.LogLevel);
 
             if (settings.TemplateFolder != null)
                 builder.Append("-t \"{0}\"", settings.TemplateFolder.FullPath);
@@ -67,8 +47,7 @@ namespace Cake.DocFx.Pdf
             if (settings.Name != null)
                 builder.Append("--name \"{0}\"", settings.Name);
             #endregion
-
-            return builder;
         }
+
     }
 }
