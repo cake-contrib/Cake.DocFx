@@ -11,6 +11,7 @@
     <licenseUrl>https://github.com/cake-contrib/Cake.DocFx/blob/develop/LICENSE</licenseUrl>
     <projectUrl>https://github.com/cake-contrib/Cake.DocFx</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/cake-contrib/graphics@a5cf0f881c390650144b2243ae551d5b9f836196/png/cake-contrib-medium.png</iconUrl>
+    <repository type="git" url="https://github.com/cake-contrib/Cake.DocFx"/>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <copyright>Copyright (c) Cake Contributions 2016 - Present</copyright>
     <tags>Cake Script DocFx</tags>
