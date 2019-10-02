@@ -1,6 +1,6 @@
 # Cake.DocFx Addin
 
-This Addin for the Cake Build Automation System allows you to generate a documentation website with [docfx](http://dotnet.github.io/docfx/index.html). More about Cake at http://cakebuild.net
+This Addin for the Cake Build Automation System allows you to generate a documentation website with [docfx](http://dotnet.github.io/docfx/index.html). More about Cake at [cakebuild.net](http://cakebuild.net).
 
 [![License](http://img.shields.io/:license-mit-blue.svg)](http://cake-contrib.mit-license.org)
 
@@ -27,7 +27,7 @@ This Addin for the Cake Build Automation System allows you to generate a documen
 
 ## Chat Room
 
-Come join in the conversation about Cake.DocFx in our Gitter Chat Room
+Come join in the conversation about Cake.DocFx in our Gitter Chat Room.
 
 [![Join the chat at https://gitter.im/cake-contrib/Lobby](https://badges.gitter.im/cake-contrib/Lobby.svg)](https://gitter.im/cake-contrib/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
@@ -46,4 +46,3 @@ On OSX/Linux run:
 ```bash
 ./build.sh
 ```
-
