@@ -1,4 +1,4 @@
-<!DOCTYPE html><html><head>
+﻿<!DOCTYPE html><html><head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=Edge">
         <meta name="description">
@@ -6,8 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/Cake.DocFx/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/Cake.DocFx/assets/img/favicon.ico" type="image/x-icon">
-        <title>Docs - API - DocFxInitAliases Class</title>
-        <link href="/Cake.DocFx/assets/css/mermaid.css" rel="stylesheet">
+        <title>Cake.DocFx - API - DocFxInitAliases Class</title>
         <link href="/Cake.DocFx/assets/css/highlight.css" rel="stylesheet">
         <link href="/Cake.DocFx/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
         <link href="/Cake.DocFx/assets/css/adminlte/AdminLTE.css" rel="stylesheet">
@@ -22,6 +21,7 @@
         <script src="/Cake.DocFx/assets/js/jquery.slimscroll.min.js"></script>
         <script src="/Cake.DocFx/assets/js/jquery.sticky-kit.min.js"></script>
         <script src="/Cake.DocFx/assets/js/mermaid.min.js"></script>
+        <script src="/Cake.DocFx/assets/js/svg-pan-zoom.min.js"></script>
         <!--[if lt IE 9]>
         <script src="/Cake.DocFx/assets/js/html5shiv.min.js"></script>
         <script src="/Cake.DocFx/assets/js/respond.min.js"></script>
@@ -36,7 +36,7 @@
             <header class="main-header">   
                      
                 <a href="/Cake.DocFx/" class="logo">
-                            <span>Docs</span>
+                            <span>Cake.DocFx</span>
                 </a>   
                          
                 <nav class="navbar navbar-static-top" role="navigation">
@@ -57,6 +57,7 @@
                     <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
                         <ul class="nav navbar-nav">                            
                                     <li><a href="/Cake.DocFx/docs">Documentation</a></li>
+        <li><a href="/Cake.DocFx/tasks">Tasks</a></li>
         <li><a href="/Cake.DocFx/blog">Blog</a></li>
         <li class="active"><a href="/Cake.DocFx/api">API</a></li>
  
@@ -80,10 +81,11 @@
 </div>
 
                 </section>
-                <section class="sidebar">                    
+                <section class="sidebar">    
+                                     
                     	
-	    <script src="/assets/js/lunr.min.js"></script>
-    <script src="/assets/js/searchIndex.js"></script>
+	    <script src="/Cake.DocFx/assets/js/lunr.min.js"></script>
+    <script src="/Cake.DocFx/assets/js/searchIndex.js"></script>
     <div class="sidebar-form">
         <div class="input-group">
             <input type="text" name="search" id="search" class="form-control" placeholder="Search Types...">
@@ -108,7 +110,7 @@
             } else {					
                 for(var i = 0; i < results.length; ++i){
                     var res = results[i];
-                    listHtml += "<li><a href='" + res.url + "'>" + res.title + "</a></li>";
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
                 }				
             }
             listHtml += "</ul>";				
@@ -120,6 +122,13 @@
                 runSearch($("#search").val());
             });
         });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
     </script>
 	
     <hr>
@@ -129,16 +138,23 @@
 			<li class="header">Namespace</li>
 		<li><a href="/Cake.DocFx/api/Cake.DocFx">Cake<wbr>.DocFx</a></li>
 		<li role="separator" class="divider"></li>
+			<li class="header">Enum Types</li>
+				<li><a href="/Cake.DocFx/api/Cake.DocFx/DocFxLogLevel">DocFxLogLevel</a></li>
 			<li class="header">Class Types</li>
+				<li><a href="/Cake.DocFx/api/Cake.DocFx/BaseDocFxLogSettings">BaseDocFxLogSettings</a></li>
 				<li><a href="/Cake.DocFx/api/Cake.DocFx/DocFxAliases">DocFxAliases</a></li>
 				<li><a href="/Cake.DocFx/api/Cake.DocFx/DocFxBuildAliases">DocFxBuildAliases</a></li>
 				<li><a href="/Cake.DocFx/api/Cake.DocFx/DocFxGlobalMetadata">DocFxGlobalMetadata</a></li>
 				<li class="selected"><a href="/Cake.DocFx/api/Cake.DocFx/DocFxInitAliases">DocFxInitAliases</a></li>
+				<li><a href="/Cake.DocFx/api/Cake.DocFx/DocFxMergeAliases">DocFxMergeAliases</a></li>
 				<li><a href="/Cake.DocFx/api/Cake.DocFx/DocFxMetadataAliases">DocFxMetadataAliases</a></li>
+				<li><a href="/Cake.DocFx/api/Cake.DocFx/DocFxPdfAliases">DocFxPdfAliases</a></li>
+				<li><a href="/Cake.DocFx/api/Cake.DocFx/DocFxServeAliases">DocFxServeAliases</a></li>
 				<li><a href="/Cake.DocFx/api/Cake.DocFx/DocFxSettings">DocFxSettings</a></li>
 
 
                     </ul>
+                            
                 </section>                
             </aside>
             
@@ -182,8 +198,8 @@
 					</div>		
 					<div class="col-md-6">
 						<div class="mermaid">
-							graph TD
-	Base0["object"]--&gt;Type
+							graph BT
+	Type--&gt;Base0["object"]
 	Type["DocFxInitAliases"]
 class Type type-node
 
@@ -195,7 +211,7 @@ class Type type-node
 
 	<h1 id="Syntax">Syntax</h1>
 	<pre><code>[CakeAliasCategory("DocFx")]
-[CakeNamespaceImport("Cake.DocFx.Build")]
+[CakeNamespaceImport("Cake.DocFx.Init")]
 public static class DocFxInitAliases</code></pre>
 
 
@@ -221,6 +237,7 @@ public static class DocFxInitAliases</code></pre>
 			</tbody></table>
 		</div>
 	</div>	
+
 
 
 
@@ -265,6 +282,7 @@ public static class DocFxInitAliases</code></pre>
 		
 
 
+
 	
 </section>
                 
@@ -284,12 +302,9 @@ public static class DocFxInitAliases</code></pre>
         <div class="github-button">
     <a href="https://github.com/cake-contrib/Cake.DocFx" target="_blank"><i class="fa fa-github"></i> GitHub</a>
 </div>
-<script>
-    ((window.gitter = {}).chat = {}).options = {
-        room: 'cake-contrib/Lobby'
-    };
-</script>
-<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async="" defer=""></script>
+<div class="github-button">
+    <a href="https://github.com/cake-build/cake/discussions" target="_blank"><i class="fa fa-comment"></i> Discussions</a>
+</div>
 
 <script type="text/javascript" src="/Cake.DocFx/assets/js/anchor.min.js"></script>
 <script type="text/javascript" src="/Cake.DocFx/assets/js/clipboard.min.js"></script>
@@ -344,22 +359,53 @@ public static class DocFxInitAliases</code></pre>
                 $(document.body).removeClass('sidebar-open');
             });
             
-            $(document).load(function() {
+            $(document).ready(function() {
                 mermaid.initialize(
                 {
                     flowchart:
                     {
-                        htmlLabels: false,
-                        useMaxWidth:false
-                    }
-                });  
-                mermaid.init(undefined, ".mermaid")
-                $('svg').addClass('img-responsive');
+                        useMaxWidth: false
+                    },
+					startOnLoad: false,
+					cloneCssStyles: false
+                });     
+                mermaid.init(undefined, ".mermaid");
+
+                // Remove the max-width setting that Mermaid sets
+                var mermaidSvg = $('.mermaid svg');
+                mermaidSvg.addClass('img-responsive');
+                mermaidSvg.css('max-width', '');
+
+                // Make it scrollable
+				var target = document.querySelector(".mermaid svg");
+				if(target !== null)
+				{
+					var panZoom = window.panZoom = svgPanZoom(target, {
+						zoomEnabled: true,
+						controlIconsEnabled: true,
+						fit: true,
+						center: true,
+                        maxZoom: 20,
+                        zoomScaleSensitivity: 0.6
+					});			                          
+
+                    // Do the reset once right away to fit the diagram
+                    panZoom.resize();
+                    panZoom.fit();
+                    panZoom.center();
+                    
+                    $(window).resize(function(){
+                        panZoom.resize();
+                        panZoom.fit();
+                        panZoom.center();
+                    });
+				}
                 
                 $('pre code').each(function(i, block) {
                     hljs.highlightBlock(block);
                 });  
             });
+
             hljs.initHighlightingOnLoad();
 
             // Back to top

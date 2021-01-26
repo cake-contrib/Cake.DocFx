@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
@@ -8,8 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/Cake.DocFx/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/Cake.DocFx/assets/img/favicon.ico" type="image/x-icon">
-        <title>Docs - Release</title>
-        <link href="/Cake.DocFx/assets/css/mermaid.css" rel="stylesheet">
+        <title>Cake.DocFx - Release</title>
         <link href="/Cake.DocFx/assets/css/highlight.css" rel="stylesheet">
         <link href="/Cake.DocFx/assets/css/bootstrap/bootstrap.css" rel="stylesheet" />
         <link href="/Cake.DocFx/assets/css/adminlte/AdminLTE.css" rel="stylesheet" />
@@ -24,6 +23,7 @@
         <script src="/Cake.DocFx/assets/js/jquery.slimscroll.min.js"></script>
         <script src="/Cake.DocFx/assets/js/jquery.sticky-kit.min.js"></script>
         <script src="/Cake.DocFx/assets/js/mermaid.min.js"></script>
+        <script src="/Cake.DocFx/assets/js/svg-pan-zoom.min.js"></script>
         <!--[if lt IE 9]>
         <script src="/Cake.DocFx/assets/js/html5shiv.min.js"></script>
         <script src="/Cake.DocFx/assets/js/respond.min.js"></script>
@@ -38,7 +38,7 @@
             <header class="main-header">   
                      
                 <a href="/Cake.DocFx/" class="logo">
-                            <span>Docs</span>
+                            <span>Cake.DocFx</span>
                 </a>   
                          
                 <nav class="navbar navbar-static-top" role="navigation">
@@ -59,6 +59,7 @@
                     <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
                         <ul class="nav navbar-nav">                            
                                     <li><a href="/Cake.DocFx/docs">Documentation</a></li>
+        <li><a href="/Cake.DocFx/tasks">Tasks</a></li>
         <li class="active"><a href="/Cake.DocFx/blog">Blog</a></li>
         <li><a href="/Cake.DocFx/api">API</a></li>
  
@@ -77,22 +78,24 @@
     <div id="infobar-headings"></div>
 
                 </section>
-                <section class="sidebar">                    
+                <section class="sidebar">    
+                                     
                     
 
                     <ul class="sidebar-menu">
                         
 
-    <li class="header"><i class="fa fa-bookmark"></i> Categories</li>    
-        <li class="selected"><a href="/blog/release">Release</a></li>
+        <li class="header"><i class="fa fa-bookmark"></i> Categories</li>    
+            <li class="selected"><a href="/Cake.DocFx/blog/Release">Release</a></li>
     
     <li class="header"><i class="fa fa-calendar"></i> Archive</li>    
-        <li><a href="/blog/archive/2017/02">February, 2017</a></li>
+        <li><a href="/Cake.DocFx/blog/archive/2017/02">February, 2017</a></li>
     
-    <li class="header"><i class="fa fa-user"></i> Authors</li>    
-        <li><a href="/blog/author/gep13">gep13</a></li>
+        <li class="header"><i class="fa fa-user"></i> Authors</li>    
+            <li><a href="/Cake.DocFx/blog/author/gep13">gep13</a></li>
 
                     </ul>
+                            
                 </section>                
             </aside>
             
@@ -102,21 +105,23 @@
 
 
 
-	<section class="content-header">
-		<h1>Release</h1>
-	</section>
+		<section class="content-header">
+			<h1>Release</h1>
+		</section>
 	<section class="content">
 		
 
         <h2><a href="/Cake.DocFx/blog/new-release-0.2.0">New Release - 0.2.0</a></h2>
-<dl class="dl-horizontal">
-    <dt><i class="fa fa-calendar"></i> Published</dt>
+
+<dl class="dl-horizontal" style="margin-bottom: 12px;">
+    <dt style="text-align: left;"><i class="fa fa-calendar"></i> Published</dt>
     <dd>15 February 2017</dd>
-        <dt><i class="fa fa-bookmark"></i> Category</dt>
-        <dd><a href="/blog/release">Release</a></dd>
-            <dt><i class="fa fa-user"></i> Author</dt>
-        <dd><a href="/blog/author/gep13">gep13</a></dd>
-</dl>            <div>
+        <dt style="text-align: left;"><i class="fa fa-bookmark"></i> Category</dt>
+        <dd><a href="/Cake.DocFx/blog/Release">Release</a></dd>
+            <dt style="text-align: left;"><i class="fa fa-user"></i> Author</dt>
+        <dd><a href="/Cake.DocFx/blog/author/gep13">gep13</a></dd>
+</dl>
+            <div>
                 <p>Thanks to a contribution from @devlead, we are releasing 0.2.0 of Cake.DocFx.  This includes the following:</p>
                 <a href="/Cake.DocFx/blog/new-release-0.2.0">Read more...</a>
             </div>
@@ -149,12 +154,9 @@
         <div class="github-button">
     <a href="https://github.com/cake-contrib/Cake.DocFx" target="_blank"><i class="fa fa-github"></i> GitHub</a>
 </div>
-<script>
-    ((window.gitter = {}).chat = {}).options = {
-        room: 'cake-contrib/Lobby'
-    };
-</script>
-<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+<div class="github-button">
+    <a href="https://github.com/cake-build/cake/discussions" target="_blank"><i class="fa fa-comment"></i> Discussions</a>
+</div>
 
 <script type="text/javascript" src="/Cake.DocFx/assets/js/anchor.min.js"></script>
 <script type="text/javascript" src="/Cake.DocFx/assets/js/clipboard.min.js"></script>
@@ -209,22 +211,53 @@
                 $(document.body).removeClass('sidebar-open');
             });
             
-            $(document).load(function() {
+            $(document).ready(function() {
                 mermaid.initialize(
                 {
                     flowchart:
                     {
-                        htmlLabels: false,
-                        useMaxWidth:false
-                    }
-                });  
-                mermaid.init(undefined, ".mermaid")
-                $('svg').addClass('img-responsive');
+                        useMaxWidth: false
+                    },
+					startOnLoad: false,
+					cloneCssStyles: false
+                });     
+                mermaid.init(undefined, ".mermaid");
+
+                // Remove the max-width setting that Mermaid sets
+                var mermaidSvg = $('.mermaid svg');
+                mermaidSvg.addClass('img-responsive');
+                mermaidSvg.css('max-width', '');
+
+                // Make it scrollable
+				var target = document.querySelector(".mermaid svg");
+				if(target !== null)
+				{
+					var panZoom = window.panZoom = svgPanZoom(target, {
+						zoomEnabled: true,
+						controlIconsEnabled: true,
+						fit: true,
+						center: true,
+                        maxZoom: 20,
+                        zoomScaleSensitivity: 0.6
+					});			                          
+
+                    // Do the reset once right away to fit the diagram
+                    panZoom.resize();
+                    panZoom.fit();
+                    panZoom.center();
+                    
+                    $(window).resize(function(){
+                        panZoom.resize();
+                        panZoom.fit();
+                        panZoom.center();
+                    });
+				}
                 
                 $('pre code').each(function(i, block) {
                     hljs.highlightBlock(block);
                 });  
             });
+
             hljs.initHighlightingOnLoad();
 
             // Back to top

@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0">
+<rss xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">
 	<channel>
-		<title />
+		<title>Cake.DocFx</title>
 		<link>http://cake-contrib.github.io/Cake.DocFx</link>
 		<description />
-		<copyright>2017</copyright>
-		<pubDate>Tue, 02 May 2017 09:49:33 GMT</pubDate>
-		<lastBuildDate>Tue, 02 May 2017 09:49:33 GMT</lastBuildDate>
+		<copyright>2021</copyright>
+		<pubDate>Tue, 26 Jan 2021 20:59:43 GMT</pubDate>
+		<lastBuildDate>Tue, 26 Jan 2021 20:59:43 GMT</lastBuildDate>
 		<item>
 			<title>New Release - 0.2.0</title>
 			<link>http://cake-contrib.github.io/Cake.DocFx/blog/new-release-0.2.0</link>
@@ -14,6 +14,26 @@
 			<author>gep13</author>
 			<guid>http://cake-contrib.github.io/Cake.DocFx/blog/new-release-0.2.0</guid>
 			<pubDate>Wed, 15 Feb 2017 00:00:00 GMT</pubDate>
+			<content:encoded>&lt;h1 id="long-time-no-release"&gt;Long time, no release&lt;/h1&gt;
+&lt;p&gt;Thanks to a contribution from &amp;#64;devlead, we are releasing 0.2.0 of Cake.DocFx.  This includes the following:&lt;/p&gt;
+&lt;h2 id="bug"&gt;Bug&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-contrib/Cake.DocFx/issues/9"&gt;&lt;strong&gt;#9&lt;/strong&gt;&lt;/a&gt; Add lib folder structure to NuGet package&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="improvements"&gt;Improvements&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-contrib/Cake.DocFx/issues/19"&gt;&lt;strong&gt;#19&lt;/strong&gt;&lt;/a&gt; Remove usage of obsolete Tool&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-contrib/Cake.DocFx/issues/17"&gt;&lt;strong&gt;#17&lt;/strong&gt;&lt;/a&gt; Upgrade to latest Cake&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-contrib/Cake.DocFx/issues/12"&gt;&lt;strong&gt;#12&lt;/strong&gt;&lt;/a&gt; Convert this repo to use Cake.Recipe&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-contrib/Cake.DocFx/issues/7"&gt;&lt;strong&gt;#7&lt;/strong&gt;&lt;/a&gt; Update NuGet Metadata&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="documentation"&gt;Documentation&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/cake-contrib/Cake.DocFx/issues/18"&gt;&lt;strong&gt;#18&lt;/strong&gt;&lt;/a&gt; Add Wyam Documentation generation&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;It was decided that this was required due to the fact that with the impending release of Cake 0.18.0 all addins need to be at least 0.16.0, so we decided to upload to the latest.&lt;/p&gt;
+&lt;p&gt;Please do not hesitate to reach out in the &lt;a href="https://github.com/cake-build/cake/discussions"&gt;GitHub discussions&lt;/a&gt; if you have any issues using this addin.&lt;/p&gt;
+</content:encoded>
 		</item>
 	</channel>
 </rss>
