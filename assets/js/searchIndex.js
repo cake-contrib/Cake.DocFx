@@ -39,42 +39,42 @@ var searchModule = function() {
     a(
         {
             id:0,
-            title:"DocFxGlobalMetadata",
-            content:"DocFxGlobalMetadata",
+            title:"DocFxPdfAliases",
+            content:"DocFxPdfAliases",
             description:'',
             tags:''
         },
         {
-            url:'/Cake.DocFx/api/Cake.DocFx/DocFxGlobalMetadata',
-            title:"DocFxGlobalMetadata",
+            url:'/Cake.DocFx/api/Cake.DocFx/DocFxPdfAliases',
+            title:"DocFxPdfAliases",
             description:""
         }
     );
     a(
         {
             id:1,
-            title:"DocFxLogLevel",
-            content:"DocFxLogLevel",
+            title:"DocFxBuildAliases",
+            content:"DocFxBuildAliases",
             description:'',
             tags:''
         },
         {
-            url:'/Cake.DocFx/api/Cake.DocFx/DocFxLogLevel',
-            title:"DocFxLogLevel",
+            url:'/Cake.DocFx/api/Cake.DocFx/DocFxBuildAliases',
+            title:"DocFxBuildAliases",
             description:""
         }
     );
     a(
         {
             id:2,
-            title:"DocFxServeAliases",
-            content:"DocFxServeAliases",
+            title:"DocFxPdfSettings",
+            content:"DocFxPdfSettings",
             description:'',
             tags:''
         },
         {
-            url:'/Cake.DocFx/api/Cake.DocFx/DocFxServeAliases',
-            title:"DocFxServeAliases",
+            url:'/Cake.DocFx/api/Cake.DocFx.Pdf/DocFxPdfSettings',
+            title:"DocFxPdfSettings",
             description:""
         }
     );
@@ -95,76 +95,20 @@ var searchModule = function() {
     a(
         {
             id:4,
-            title:"DocFxInitSettings",
-            content:"DocFxInitSettings",
+            title:"DocFxServeAliases",
+            content:"DocFxServeAliases",
             description:'',
             tags:''
         },
         {
-            url:'/Cake.DocFx/api/Cake.DocFx.Init/DocFxInitSettings',
-            title:"DocFxInitSettings",
+            url:'/Cake.DocFx/api/Cake.DocFx/DocFxServeAliases',
+            title:"DocFxServeAliases",
             description:""
         }
     );
     a(
         {
             id:5,
-            title:"DocFxInitAliases",
-            content:"DocFxInitAliases",
-            description:'',
-            tags:''
-        },
-        {
-            url:'/Cake.DocFx/api/Cake.DocFx/DocFxInitAliases',
-            title:"DocFxInitAliases",
-            description:""
-        }
-    );
-    a(
-        {
-            id:6,
-            title:"DocFxPdfAliases",
-            content:"DocFxPdfAliases",
-            description:'',
-            tags:''
-        },
-        {
-            url:'/Cake.DocFx/api/Cake.DocFx/DocFxPdfAliases',
-            title:"DocFxPdfAliases",
-            description:""
-        }
-    );
-    a(
-        {
-            id:7,
-            title:"DocFxAliases",
-            content:"DocFxAliases",
-            description:'',
-            tags:''
-        },
-        {
-            url:'/Cake.DocFx/api/Cake.DocFx/DocFxAliases',
-            title:"DocFxAliases",
-            description:""
-        }
-    );
-    a(
-        {
-            id:8,
-            title:"BaseDocFxLogSettings",
-            content:"BaseDocFxLogSettings",
-            description:'',
-            tags:''
-        },
-        {
-            url:'/Cake.DocFx/api/Cake.DocFx/BaseDocFxLogSettings',
-            title:"BaseDocFxLogSettings",
-            description:""
-        }
-    );
-    a(
-        {
-            id:9,
             title:"DocFxServeSettings",
             content:"DocFxServeSettings",
             description:'',
@@ -178,49 +122,35 @@ var searchModule = function() {
     );
     a(
         {
-            id:10,
-            title:"DocFxMergeAliases",
-            content:"DocFxMergeAliases",
+            id:6,
+            title:"DocFxInitSettings",
+            content:"DocFxInitSettings",
             description:'',
             tags:''
         },
         {
-            url:'/Cake.DocFx/api/Cake.DocFx/DocFxMergeAliases',
-            title:"DocFxMergeAliases",
+            url:'/Cake.DocFx/api/Cake.DocFx.Init/DocFxInitSettings',
+            title:"DocFxInitSettings",
             description:""
         }
     );
     a(
         {
-            id:11,
-            title:"DocFxBuildAliases",
-            content:"DocFxBuildAliases",
+            id:7,
+            title:"DocFxGlobalMetadata",
+            content:"DocFxGlobalMetadata",
             description:'',
             tags:''
         },
         {
-            url:'/Cake.DocFx/api/Cake.DocFx/DocFxBuildAliases',
-            title:"DocFxBuildAliases",
+            url:'/Cake.DocFx/api/Cake.DocFx/DocFxGlobalMetadata',
+            title:"DocFxGlobalMetadata",
             description:""
         }
     );
     a(
         {
-            id:12,
-            title:"DocFxSettings",
-            content:"DocFxSettings",
-            description:'',
-            tags:''
-        },
-        {
-            url:'/Cake.DocFx/api/Cake.DocFx/DocFxSettings',
-            title:"DocFxSettings",
-            description:""
-        }
-    );
-    a(
-        {
-            id:13,
+            id:8,
             title:"DocFxMetadataAliases",
             content:"DocFxMetadataAliases",
             description:'',
@@ -234,21 +164,77 @@ var searchModule = function() {
     );
     a(
         {
-            id:14,
-            title:"DocFxMergeSettings",
-            content:"DocFxMergeSettings",
+            id:9,
+            title:"DocFxMergeAliases",
+            content:"DocFxMergeAliases",
             description:'',
             tags:''
         },
         {
-            url:'/Cake.DocFx/api/Cake.DocFx.Merge/DocFxMergeSettings',
-            title:"DocFxMergeSettings",
+            url:'/Cake.DocFx/api/Cake.DocFx/DocFxMergeAliases',
+            title:"DocFxMergeAliases",
             description:""
         }
     );
     a(
         {
-            id:15,
+            id:10,
+            title:"DocFxSettings",
+            content:"DocFxSettings",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/Cake.DocFx/api/Cake.DocFx/DocFxSettings',
+            title:"DocFxSettings",
+            description:""
+        }
+    );
+    a(
+        {
+            id:11,
+            title:"DocFxInitAliases",
+            content:"DocFxInitAliases",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/Cake.DocFx/api/Cake.DocFx/DocFxInitAliases',
+            title:"DocFxInitAliases",
+            description:""
+        }
+    );
+    a(
+        {
+            id:12,
+            title:"BaseDocFxLogSettings",
+            content:"BaseDocFxLogSettings",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/Cake.DocFx/api/Cake.DocFx/BaseDocFxLogSettings',
+            title:"BaseDocFxLogSettings",
+            description:""
+        }
+    );
+    a(
+        {
+            id:13,
+            title:"DocFxAliases",
+            content:"DocFxAliases",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/Cake.DocFx/api/Cake.DocFx/DocFxAliases',
+            title:"DocFxAliases",
+            description:""
+        }
+    );
+    a(
+        {
+            id:14,
             title:"DocFxBuildSettings",
             content:"DocFxBuildSettings",
             description:'',
@@ -262,15 +248,29 @@ var searchModule = function() {
     );
     a(
         {
-            id:16,
-            title:"DocFxPdfSettings",
-            content:"DocFxPdfSettings",
+            id:15,
+            title:"DocFxMergeSettings",
+            content:"DocFxMergeSettings",
             description:'',
             tags:''
         },
         {
-            url:'/Cake.DocFx/api/Cake.DocFx.Pdf/DocFxPdfSettings',
-            title:"DocFxPdfSettings",
+            url:'/Cake.DocFx/api/Cake.DocFx.Merge/DocFxMergeSettings',
+            title:"DocFxMergeSettings",
+            description:""
+        }
+    );
+    a(
+        {
+            id:16,
+            title:"DocFxLogLevel",
+            content:"DocFxLogLevel",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/Cake.DocFx/api/Cake.DocFx/DocFxLogLevel',
+            title:"DocFxLogLevel",
             description:""
         }
     );
