@@ -14,7 +14,7 @@
     <repository type="git" url="https://github.com/cake-contrib/Cake.DocFx.git"/>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <copyright>Copyright (c) Cake Contributions 2016 - Present</copyright>
-    <tags>Cake Script DocFx</tags>
+    <tags>cake cake-addin docfx</tags>
     <releaseNotes>https://github.com/cake-contrib/Cake.DocFx/releases/tag/0.13.0</releaseNotes>
   </metadata>
   <files>
