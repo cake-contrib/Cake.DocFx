@@ -15,7 +15,7 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <copyright>Copyright (c) Cake Contributions 2016 - Present</copyright>
     <tags>cake cake-addin docfx</tags>
-    <releaseNotes>https://github.com/cake-contrib/Cake.DocFx/releases/tag/0.13.0</releaseNotes>
+    <releaseNotes>https://github.com/cake-contrib/Cake.DocFx/releases/tag/1.0.0</releaseNotes>
   </metadata>
   <files>
     <file src="..\..\..\..\nuspec\nuget\icon.png" target="" />
