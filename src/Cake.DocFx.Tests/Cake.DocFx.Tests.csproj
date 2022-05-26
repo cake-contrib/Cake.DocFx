@@ -11,6 +11,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Properties\**" />
+    <EmbeddedResource Remove="Properties\**" />
+    <None Remove="Properties\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.8.3" />
     <PackageReference Include="Cake.Core" Version="1.0.0" />
     <PackageReference Include="Cake.Testing" Version="1.0.0" />
@@ -23,9 +29,5 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Cake.DocFx\Cake.DocFx.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Properties\" />
   </ItemGroup>
 </Project>
