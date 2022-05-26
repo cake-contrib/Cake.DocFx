@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netstandard2.0</TargetFrameworks>
+    <TargetFrameworks>net5.0</TargetFrameworks>
     <Description>Cake Addin providing DocFx support</Description>
     <Authors>Paul Reichelt and contributors</Authors>
     <Company></Company>
@@ -23,6 +23,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Cake.Core" Version="1.0.0" />
+	  <PackageReference Include="Cake.Core" Version="2.*" />
   </ItemGroup>
 </Project>
